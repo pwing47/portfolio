@@ -1,15 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #fff;
   --foreground: #171717;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +17,1048 @@
   }
 }
 
+@charset "utf-8";
+
+@-ms-viewport {
+	width: device-width;
+}
+@viewport {
+	width: device-width;
+}
+
+/* Text and Layout
+****************************/
+@font-face {
+    font-family: 'Kreon-Regular';
+    src: url('/public/fonts/Kreon-Regular.eot?#iefix') format('embedded-opentype'),
+         url('/public/fonts/Kreon-Regular.woff') format('woff'),
+         url('/public/fonts/Kreon-Regular.ttf') format('truetype'),
+         url('/public/fonts/Kreon-Regular.svg#Kreon-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kreon-Bold';
+    src: url('/public/fonts/Kreon-Bold.eot?#iefix') format('embedded-opentype'),
+         url('/public/fonts/Kreon-Bold.woff') format('woff'),
+         url('/public/fonts/Kreon-Bold.ttf') format('truetype'),
+         url('/public/fonts/Kreon-Bold.svg#Kreon-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whitney';
+    src: url('/public/fonts/whitney-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/public/fonts/whitney-bold-webfont.woff') format('woff'),
+         url('/public/fonts/whitney-bold-webfont.ttf') format('truetype'),
+         url('/public/fonts/whitney-bold-webfont.svg#Whitney') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	background: #222;
+	font-family: "Kreon-Regular", "Times New Roman", "Times", serif;
+	color: #333;
+	font-size: 100%;
+}
+
+h1, h2, h3, h4, p {
+	margin: 0;
+}
+h1, h2, h3, h4, .pre_header, .nav-title {
+	text-transform: uppercase;
+}
+h3, h4, .nav-title {
+	font-family: "Whitney", "Segoe UI Bold", Tahoma, Arial, sans-serif;
+	font-weight: bold;
+}
+p.loud {
+	font-family: "Kreon-Bold", "Times New Roman", "Times", serif;
+	line-height: 1em;
+	margin: 0 0 1em 0; /* 0 0 24px 0 */
+}
+
+h1 {			font-size: 6.75em; } 
+h2, p.loud {	font-size: 2.9375em; } /* 47px 47/16 */
+h3 {			font-size: 2em; } /* 32px 32/16 */
+h4,p.big {		font-size: 1.5em; } /* 24px 24/16 */
+p {				font-size: 1.25em; } /* 20px 20/16 */
+
+a {
+	color: #333;
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: none;
+}
+.description {
+	color: #777;
+	font-style: italic;
+	font-size: 1.25em;
+}
+.pre_header {
+	font-family: "Whitney", "Segoe UI Bold", Tahoma, Arial, sans-serif;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+.pre_header.big { font-size: 2em; }
+
+#home .pre_header { color: #388383; }
+#home .pre_header.big { color: #83b5b5; }
+
+/* Left Navigation
+**************************/
+nav {
+	width: 420px;
+	margin: 0 0 0 -720px;
+	padding-right: 1020px;
+	position: fixed;
+	top: 0;
+	left: 50%;
+}
+#nav_ribbon {
+	width: 260px;
+	margin: 0px 80px;
+	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_nav.png) repeat 1px 0px, #fff;
+	box-shadow: 0 1px 1px rgba(0,0,0,.12);
+	padding-top: 0.9375em;
+	padding-bottom: 2.8125em; /* 45px */
+	position: absolute;
+}
+nav ul {
+	margin: 0 0.75em; /* 12px */
+	padding: 0;
+}
+nav li {
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	list-style: none;
+	
+}
+nav a {
+	display: block;
+	padding-left: 15px;
+	padding-top: 23px;
+	height: 84px;
+	text-decoration: none;
+}
+nav li:not(:first-child), #nav_down { background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/nav_li_shadow.png) no-repeat top center; }
+.nav-title { font-size: 1.875em; } /* 30px */
+#nav_down {
+	height: 39px;
+	width: 260px;
+	position: absolute;
+	bottom: -39px;
+	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_nav_down.png) no-repeat top center;
+}
+
+#nav_home.active .nav-title {		color: #006666; }
+#nav_portfolio.active .nav-title {	color: #002266; }
+#nav_relics.active .nav-title {		color: #096600; }
+#nav_aboutme.active .nav-title {	color: #8c1d07; }
+#nav_contact.active .nav-title {	color: #660066; }
+
+#pc_logo {
+	height: 120px;
+	width: 120px;
+	background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/pc_logo_p_home.png), url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/pc_logo_c.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: #333;
+	margin: 0 auto 0.3125em auto;
+	border-radius: 60px;
+}
+
+li .bar_faded {
+	width: 4px;
+	height: 96px;
+	position: absolute;
+	left: 0px;
+	top: 255px;
+	background: none;
+	z-index: 998;
+}
+li:hover .bar_faded { background: rgba(0,0,0,0.04); }
+
+.bar {
+	width: 4px;
+	height: 0px;
+	position: absolute;
+	left: 0px;
+	transition: .2s all ease-in-out;
+	-webkit-transition: .2s all ease-in-out;
+	-moz-transition: .2s all ease-in-out;
+	z-index: 999;
+}
+.active .bar {
+	height: 96px;
+}
+
+#nav_home .bar {				top: 195px; background: #006666; }
+#nav_home.active .bar,
+#nav_home .bar_faded {			top: 147px; }
+
+#nav_portfolio .bar {			top: 303px; background: #002266; }
+#nav_portfolio.active .bar,
+#nav_portfolio .bar_faded {		top: 255px; }
+
+#nav_relics .bar {				top: 411px; background: #096600; }
+#nav_relics.active .bar,
+#nav_relics .bar_faded {		top: 363px; }
+
+#nav_aboutme .bar {				top: 519px; background: #8c1d07; }
+#nav_aboutme.active .bar,
+#nav_aboutme .bar_faded {		top: 471px; }
+
+#nav_contact .bar {				top: 627px; background: #660066; }
+#nav_contact.active .bar,
+#nav_contact .bar_faded {		top: 579px; }
+
+/* Social Links
+***************************/
+#social {
+	text-align: right;
+	float: right;
+	margin-bottom: 1.875em; /* 30px */
+}
+#social ul {
+	padding: 0px;
+	float: right;
+}
+#social li {
+	width: 72px;
+	height: 72px;
+	border-radius: 36px;
+	border: 1px solid #fff;
+	box-shadow: 0 1px 1px rgba(0,0,0,.12);
+	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_social.png) repeat, #fafafa;
+	list-style: none;
+	margin-bottom: 1em;
+}
+#social h4 {
+	clear: both;
+	margin-top: 1.875em; /* 30px */
+}
+#social li a { text-decoration: none; width: 72px; height: 72px; display: block; }
+
+#social_linkedin a { background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/social_linkedin.png) no-repeat center; }
+#social_linkedin:hover a { background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/social_linkedin_hover.png) no-repeat center; }
+
+#social_googleplus a { background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/social_googleplus.png) no-repeat center; }
+#social_googleplus:hover a { background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/social_googleplus_hover.png) no-repeat center; }
+
+#social_facebook a { background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/social_facebook.png) no-repeat center; }
+#social_facebook:hover a { background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/social_facebook_hover.png) no-repeat center; }
+
+/* Sections
+***************************/
+.content_section {
+	width: 100%;
+	padding-bottom: 3.125em; /* 50px */
+	overflow: hidden; 
+}
+.content {
+	width: 960px;
+	margin: 0 auto;
+	padding: 50px 80px 30px 400px;
+}
+
+#home {			background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #d0f1f0; }
+#portfolio {	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_portfolio_top.png) repeat-x, url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #c7daff; }
+#relics {		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_relics_top.png) repeat-x, url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #ddf2db; }
+#aboutme { 		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_aboutme_top.png) repeat-x, url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #f9daca; }
+#contact {		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_contact_top.png) repeat-x, url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #f3e5f3; margin-bottom: -3.5em;  }
+#sub_footer {	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images//images/bg_relics_top.png) repeat-x, url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images//images/bg_noise.png) repeat, #f3e5f3; padding-top: 2.5em; margin-bottom: -3.5em;  }
+#sub_footer.relic {	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/images/bg_aboutme_top.png) repeat-x, url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images//images/bg_noise.png) repeat, #f3e5f3; }
+
+/* Home
+**************************************/
+#flip_container {
+	perspective: 800px;
+	position: relative;
+	display: block;
+	margin-top: -1.25em;
+}
+#title_area {
+	width: 780px; /* orig 760px */
+	height: 138px;
+	position: absolute;
+	/*transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transition: transform .2s;
+	-webkit-transition: transform .2s;
+	-moz-transition: transform .2s;
+	-o-transition: transform .2s;*/
+}
+/*
+#title_area:hover {
+	transform: rotateX( -7deg );
+	-webkit-transform: rotateX( -7deg );
+	-moz-transform: rotateX( -7deg );
+	-o-transform: rotateX( -7deg );
+}
+#title_area.flipped {
+	transform: rotateX( -180deg );
+	-webkit-transform: rotateX( -180deg );
+	-moz-transform: rotateX( -180deg );
+	-o-transform: rotateX( -180deg );
+}*/
+
+#title_area h1 {
+	display: block;
+	position: absolute;
+	/*backface-visibility: hidden;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;*/
+}
+/*
+#title_pronounce {
+	transform: rotateX( -180deg );	
+	-webkit-transform: rotateX( -180deg );
+	-moz-transform: rotateX( -180deg );
+	-o-transform: rotateX( -180deg );
+	display: block;
+	position: absolute;
+	padding-top: 11px;
+	height: 127px;
+	width: 680px;
+	backface-visibility: hidden;
+	cursor: pointer;
+}
+#title_pronounce img {
+	width: 100%;
+}
+#title_pronounce:hover {	
+	transform: rotateX( -173deg );
+	-webkit-transform: rotateX( -173deg );
+	-moz-transform: rotateX( -173deg );
+	-o-transform: rotateX( -173deg );
+}
+#title_area h1:hover,
+#title_pronounce:hover {
+	background: rgba(0,0,0,0.05);
+}*/
+
+#home_intro {
+	float: left;
+	margin-top: 10em;
+	width: 730px;
+	margin-bottom: 3em;
+}
+
+#mug {
+	padding: 6px;
+	border-radius: 112px;
+	border: 1px solid #fff;
+	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_nav.png) repeat, #fff;
+	float: right;
+	margin-top: -1em;
+}
+#mug, #mug img {
+	width: 212px;
+	height: 212px;
+}
+
+#home p { clear: left; }
+#home p.big { color: #388383; }
+#home p.loud { color: #144444; }
+
+#skills {
+	display: table;
+	width: 425px;    
+	border-spacing: 0px; /* cellspacing: poor IE support */
+	float: left;
+	clear: left;
+	margin-top: 10px;
+	margin-left: -10px;
+}
+.skills_col {
+	float: left; /* fix for buggy browsers */
+	display: table-column;         
+	width: 65px;
+}
+.skills_col div {
+	width: 65px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+
+#skill_photoshop { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_photoshop.png); }
+#skill_dreamweaver { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_dreamweaver.png); }
+#skill_illustrator { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_illustrator.png); }
+#skill_flash { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_flash.png); }
+#skill_air { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_air.png); }
+#skill_as3 { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_as3.png); }
+#skill_html { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_html.png); }
+#skill_css { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_css.png); }
+#skill_jquery { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_jquery.png); }
+#skill_net { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_net.png); }
+#skill_vs2010 { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_vs2010.png); }
+#skill_mssql { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_mssql.png); }
+#skill_php { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_php.png); }
+#skill_mysql { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_mysql.png); }
+#skill_mobile { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_mobile.png); }
+#skill_joomla { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_joomla.png); }
+#skill_email { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_email.png); }
+#skill_photography { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_photography.png); }
+
+#skill_photoshop:hover { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_photoshop_hover.png); }
+#skill_dreamweaver:hover { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_dreamweaver_hover.png); }
+#skill_illustrator:hover { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_illustrator_hover.png); }
+#skill_flash:hover { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_flash_hover.png); }
+#skill_air:hover { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_air_hover.png); }
+#skill_as3:hover { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_as3_hover.png); }
+#skill_html:hover { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_html_hover.png); }
+#skill_css:hover { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_css_hover.png); }
+#skill_jquery:hover { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_jquery_hover.png); }
+#skill_net:hover { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_net_hover.png); }
+#skill_vs2010:hover { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_vs2010_hover.png); }
+#skill_mssql:hover { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_mssql_hover.png); }
+#skill_php:hover { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_php_hover.png); }
+#skill_mysql:hover { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_mysql_hover.png); }
+#skill_mobile:hover { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_mobile_hover.png); }
+#skill_joomla:hover { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_joomla_hover.png); }
+#skill_email:hover { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_email_hover.png); }
+#skill_photography:hover { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_photography_hover.png); }
+
+
+/* Portfolio and Relics Content
+*******************************************/
+#portfolio p { color: #3e4f84; }
+#relics p { color: #44853e; }
+
+.project_preview {
+	width: 455px;	
+	float: left;	
+	margin-top: 3em;
+}
+.project_preview:nth-child(odd) {
+	margin-right: 3.125em;
+}
+.project_preview a {
+	text-decoration: none;
+	border: 0px;
+}
+
+.project_thumb {
+	box-shadow: 0 1px 1px rgba(0,0,0,.12);
+	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_nav.png) repeat, #fff;
+	padding: 5px;
+	margin-bottom: .25em;
+	cursor: pointer;
+	position: relative;
+}
+.project_thumb img { width: 100%; border: 0px; }
+.project_thumb:hover:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	bottom: 10px;
+	left: 5px;
+	right: 5px;
+	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_viewproject.png) center no-repeat, rgba(0,0,0,0.35);
+	z-index: 999;
+	text-shadow: 0 0 10px #000;
+	font-family: "Whitney", "Segoe UI Bold", Tahoma, Arial, sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	font-size: 2.9em;
+	color: #fff;
+}
+
+/* Project Page
+**************************************************/
+.project_page p {
+	width: 620px;
+	padding-right: 300px;
+	margin: 0.75em 0;
+	float: left;
+}
+.project_sample .project_thumb:hover:after {
+	display: none;
+}
+
+.project_sample {
+	width: 640px;
+	float: left;
+	margin-right: 10px;
+	margin-top: 1.75em;
+	margin-bottom: 1.75em;
+}
+.project_sample .project_thumb {
+	cursor: default;
+}
+.project_sample.small {
+	width: 315px;
+}
+
+.projects_back {
+	margin-bottom: 1.5em;
+}
+.projects_back,
+.projects_prev {
+	padding-left: 45px;
+	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_backarrow_blue.png) no-repeat left center;
+}
+.projects_back,
+.projects_prev,
+.projects_next {	
+	display: inline-block;
+	font-family: "Whitney", "Segoe UI Bold", Tahoma, Arial, sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #8c9eb4;
+	font-size: 1.5em;
+	text-decoration: none;
+	padding-top: 4px;
+	height: 32px;
+}
+.projects_prev,
+.projects_next {
+	width: 275px;
+	float: left;
+	margin-top: 3em;
+}
+.projects_next {
+	text-align: right;
+	padding-right: 45px;
+	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_nextarrow_blue.png) no-repeat right center;
+}
+#relics .projects_back,
+#relics .projects_prev,
+#relics .projects_next {
+	color: #91b58d;
+}
+#relics .projects_back,
+#relics .projects_prev {
+	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_backarrow_green.png) no-repeat left center;
+}
+#relics .projects_next {
+	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_nextarrow_green.png) no-repeat right center;
+}
+
+/* About Content
+*************************************************/
+#aboutme p { color: #824438; }
+#aboutme .pre_header { color: #b58c84; }
+
+#about_ps {
+	float: right;
+	margin-top: -70px;
+	margin-left: 20px;
+}
+
+.interest {
+	height: 70px;
+	margin-top: 5px;
+	padding-top: 25px;
+	float: left;
+	width: 320px;
+	margin-left: -25px;
+	padding-left: 105px;
+	position: relative;
+}
+.interest .pic { position: absolute; }
+#interest_concerts .pic {
+	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/interest_concerts.png) no-repeat top left;
+	width: 85px; height: 85px; left: 20px; top: 0px;
+}
+#interest_running .pic {
+	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/interest_running.png) no-repeat top left;
+	width: 85px; height: 75px; left: 22px; top: 15px; }
+#interest_vinyl .pic {
+	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/interest_vinyl.png) no-repeat top left;
+	width: 85px; height: 85px; left: 22px; top: 15px;
+}
+#interest_ultimate .pic {
+	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/interest_ultimate.png) no-repeat top left;
+	width: 105px; height: 85px; left: 0px; top: 15px;
+}
+#interest_webdesign .pic {
+	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/interest_webdesign.png) no-repeat top left;
+	width: 105px; height: 85px; left: 2px; top: 10px;
+}
+#interest_books .pic {
+	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/interest_books.png) no-repeat top left;
+	width: 85px; height: 75px; left: 12px; top: 15px;
+}
+
+/* Contact
+********************************************************/
+#contact_form {
+	margin-top: 3em;
+}
+input[type=text] {
+	font-size: 1.875em;
+	width: 445px;
+	height: 45px;
+}
+textarea {
+	font-size: 1.5em;
+	width: 545px;
+	height: 175px;
+}
+input[type=text], textarea {
+	font-family: inherit;
+	padding: 0.1em 0.25em;
+	border: 1px solid #f6eaf6;
+	margin: 4px;
+}
+.input_wrapper { display: inline-block; }
+.input_wrapper, .textarea_wrapper {
+	margin-left: -0.5em;
+	margin-bottom: 2em;
+	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_nav.png) repeat 1px 0px, #fff;
+	box-shadow: 0 1px 1px rgba(0,0,0,.12);
+}
+
+#contact .pre_header { color: #b584b5; display: block; }
+#contact p { color: #823882; }
+
+#btn_send {
+	width: 175px;
+	height: 55px;
+	background-color: #b584b5;
+	background-position: center;
+	background-repeat: no-repeat;
+	border: 0;
+	box-shadow: 0 1px 1px #4c084d;
+	color: #fff;
+	font-size: 1.5em;
+	font-family: "Whitney", "Segoe UI Bold", Tahoma, Arial, sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: block;
+	cursor: pointer;
+	margin-top: 0.5em;
+	margin-left: -0.25em;
+}
+#btn_send:hover {
+	background-color: #ad7fad;
+}
+#btn_send:active {
+	outline: none !important;
+	box-shadow: inset 0 2px 1px rgba(76,8,77,0.7);
+}
+
+.form_error {
+	margin: -1.75em 0 2em 0; 
+	font-weight: bold; 
+	color: #ff3300;
+	display: none;
+}
+#form_success {
+	display: none;
+	margin-top: 3em;
+}
+
+/* Tooltip
+***************************************************/
+.tooltip { position: relative; }
+.tooltip:hover:after {
+    background: #111;
+    background: rgba(0,0,0,.8);
+    bottom: 3em;
+    color: #fff;
+    content: attr(data-title);
+    display: block;
+    left: 0.3em;
+    padding: .3em 1em;
+    position: absolute;
+    text-shadow: 0 1px 0 #000;
+    white-space: nowrap;
+    z-index: 998;
+}
+.tooltip:hover:before {
+    border: solid;
+    border-color: #111 transparent;
+    border-color: rgba(0,0,0,.8) transparent;
+    border-width: .4em .4em 0 .4em;
+    bottom: 2.6em;
+    content: "";
+	left: 1.7em;
+    display: block;
+    position: absolute;
+    z-index: 999;
+}
+
+/* Footer
+*******************************************************/
+footer {
+	width: 1340px;
+	font-family: "Whitney", "Segoe UI Bold", Tahoma, Arial, sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	z-index: 1000;
+	margin: 3em auto -3em auto;
+	border-top: 3px solid #333;
+	height: 60px;
+	background: white;
+	position: relative;
+	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #f3e5f3;
+}
+
+#footer_content {
+	position: relative;
+}
+
+footer ul {
+	padding: 0;
+	display: inline-block;
+	position: absolute;
+	left: 0px;
+}
+footer li {
+	list-style: none;
+	margin-left: 1.25em;
+	margin-right: .75em;
+	display: inline;
+	padding: 16px 0px 0px 0px;
+}
+footer span {
+	font-weight: normal;
+}
+#footer_name {
+	text-align: right;
+	width: 170px;
+	position: absolute;
+	right: 0px;
+	display: inline-block;
+	padding: 16px 1.25em 0px 0px;
+}
+footer a {
+	text-decoration: none;
+	border: 0px;
+}
+footer a img {
+	border: 0px;
+}
+#footer_social a {
+	float: right;
+	width: 45px;
+	height: 45px;
+	display: block;
+}
+footer a#nav_facebook {
+	margin-right: 200px;
+}
+#back_top {
+	width: 125px;
+	height: 80px;
+	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/footer_backtotop.png) no-repeat;
+	position: absolute;
+	top: -59px;
+	left: 50%;
+	margin-left: -65px;
+}
+#back_top a {
+	display: block;
+	width: 125px;
+	height: 80px;
+}
+
+/* Media Queries
+******************************************************/
+@media only screen 
+and (min-width: 320px) and (max-width: 960px) {
+	body { font-size: 85%; }
+	nav { display: none; }
+	.content {
+		width: 100%;
+		padding: 50px 0 30px 0;
+		text-align: center;
+	}
+	p {
+		width: 95%;
+		margin: 0 auto;
+	}
+	
+	/* Home */
+	#flip_container { width: 100%; }
+	#mug {
+		float: none;
+		margin: 1em auto 2em auto;
+	}
+	#skills {
+		margin: 1.5em auto 0 auto;
+		float: none;
+		width: 300px;
+	}
+	.skills_col,
+	.skills_col div { width: 100px; float: left; }
+	p.loud {
+		margin-top: 0.25em;
+		font-size: 2.1em;
+	}
+	#social { display: none; }
+	#home_intro { width: 100%; }
+	
+	#title_area h1 { 
+		cursor: text; 
+		margin: 0.6em auto 0 auto; 
+		line-height: 0.9em; 
+		width: 100%; 
+		font-size: 4em;
+	}
+	#title_pronounce { display: none; }
+	#title_area:hover {	transform: none; -webkit-transform: none; -moz-transform: none; -o-transform: none; }
+	#title_area.flipped { transform: none; -webkit-transform: none; -moz-transform: none; -o-transform: none; }	
+	#title_pronounce:hover { transform: none; -webkit-transform: none; -moz-transform: none; -o-transform: none; }
+	#title_area h1:hover,
+	#title_pronounce:hover { background: none; }
+	#title_area {
+		width: 100%;
+		height: auto;
+	}
+	
+	/* Projects */
+	.project_preview {
+		width: 90%;
+		max-width: 455px;
+		float: none;
+		margin: 3em auto 0 auto;
+	}
+	.project_preview:nth-child(odd) { margin-right: auto; }	
+	.project_thumb img { width: 100%; }
+	.project_thumb:hover:after {
+		content: '';
+		display: none;
+	}
+	
+	.project_page p {
+		width: 90%;
+		padding: 0 5%;
+		float: none;
+	}
+	
+	.project_sample,
+	.project_sample.small {
+		width: 95%;
+		max-width: 640px;
+		float: none;
+		margin: 0.75em auto 0 auto;
+	}	
+	.projects_back,
+	.projects_prev {
+		padding-left: 45px;
+	}
+	.projects_prev,
+	.projects_next {		
+		height: 48px;
+	}
+	.projects_prev { text-align: left; margin-left: 10px; width: 100px; }
+	.projects_next { float: right; margin-right: 10px; width: 90px; }
+	
+	/* About Me */
+	#about_ps { display: none; }
+	#aboutme h2 { margin-bottom: 0.5em; }
+	.interest .description { font-size: 1.1em; }
+	.interest {
+		text-align: left;
+		margin: 0 auto;
+		float: none;
+		width: 245px;
+	}
+	
+	/* Contact */
+	input[type=text],
+	textarea { 
+		margin: 4px auto; 
+		width: 93%;
+	}
+	input[type=text] { height: 45px; }
+	textarea { height: 90px; }
+	.input_wrapper, .textarea_wrapper {
+		margin: 0 auto 2em auto;
+		width: 90%;
+		max-width: 445px;
+		position: relative;
+	}
+	#btn_send {	margin: 0 auto;	}
+	
+	/* Footer */
+	footer {
+		width: 95%;
+		margin: 7em auto -3em auto;
+		height: 135px;
+	}
+	footer ul {
+		width: 100%;
+		position: relative;
+	}
+	footer li {
+		margin-left: 0;
+		margin-right: 0;
+		width: 25%;
+		padding: 1.75em 0 0 0;		
+		display: inline-block;
+		text-align: center;
+	}
+	footer li:nth-child(1) {
+		display: none;
+	}
+	#footer_social {
+		margin: 0 auto;
+		width: 100%;
+		text-align: center;
+	}
+	#footer_social a {
+		width: 45px;
+		height: 45px;
+		float: none;
+		display: inline;
+	}
+	#footer_name {
+		display: none;
+	}
+	footer a#nav_facebook {
+		margin-right: 0px;
+	}
+	#back_top {
+		margin-left: -63px;
+	}
+}
+
+@media only screen 
+and (min-width: 961px) and (max-width: 1439px) {
+	body {
+		font-size: 90%;
+	}	
+	.content {
+		width: 670px;
+		padding: 50px 20px 30px 270px;
+	}
+	
+	/* Nav */
+	nav {
+		width: 250px;
+		margin: 0 0 0 -480px;
+		padding-right: 710px;
+		font-size: 89%;
+	}
+	#nav_ribbon {
+		width: 210px;
+		margin: 0px 20px;
+	}
+	nav a {
+		padding-left: 15px;
+		padding-top: 26px;
+		height: 81px;
+	}
+	#nav_down {
+		height: 39px;
+		width: 210px;
+		bottom: -39px;
+	}	
+	#pc_logo {
+		height: 80px;
+		width: 80px;
+		border-radius: 40px;
+	}
+	
+	li .bar_faded,
+	.active .bar {
+		height: 86px;
+	}
+	
+	#nav_home .bar {				top: 155px; }
+	#nav_home.active .bar,
+	#nav_home .bar_faded {			top: 107px; }
+	
+	#nav_portfolio .bar {			top: 263px; }
+	#nav_portfolio.active .bar,
+	#nav_portfolio .bar_faded {		top: 215px; }
+	
+	#nav_relics .bar {				top: 371px; }
+	#nav_relics.active .bar,
+	#nav_relics .bar_faded {		top: 323px; }
+	
+	#nav_aboutme .bar {				top: 469px; }
+	#nav_aboutme.active .bar,
+	#nav_aboutme .bar_faded {		top: 431px; }
+	
+	#nav_contact .bar {				top: 587px; }
+	#nav_contact.active .bar,
+	#nav_contact .bar_faded {		top: 539px; }
+	
+	/* Home */
+	#home_intro {
+		width: 500px;
+		margin-top: 8.6em;
+	}	
+	#mug {
+		border-radius: 76px;
+		margin: -30px 30px 0px 0px;
+		width: 140px;
+		height: 140px;
+	}
+	#mug img {
+		width: 140px;
+		height: 140px;
+	}	
+	#home h1 {
+		font-size: 5em;
+	}	
+	p.loud {
+		font-size: 2em;
+		margin-bottom: 2em;
+	}	
+	#title_area {
+		width: 560px;
+		height: 118px;
+	}
+	#title_pronounce {
+		width: 500px;
+		height: 108px;
+	}
+	
+	/* Projects and Relics */
+	.project_preview {
+		width: 325px;	
+		margin-top: 3em;
+	}
+	.project_preview:nth-child(odd) {
+		margin-right: 1.35em;
+	}
+	.project_thumb {
+		padding: 5px;
+		margin-bottom: .25em;
+	}
+	
+	/* About Me */
+	.interest {
+		width: 255px;
+	}
+	#about_ps {
+		width: 50%;
+		margin-top: -15px;
+	}
+	
+	/* Footer */
+	footer {
+		width: 960px;
+	}
+	#footer_name {
+		width: 150px;
+	}
+	footer a#nav_facebook {
+		margin-right: 160px;
+	}
+	#back_top {
+		margin-left: 0px;
+	}
 }
