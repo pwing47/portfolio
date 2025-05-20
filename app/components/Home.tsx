@@ -1,3 +1,4 @@
+
 const Home = () => {
     return (
         <div className="content">
@@ -23,7 +24,7 @@ const Home = () => {
           </div>
 
           <div id="home_intro">
-            <div id="mug" title="It's me!"><img src="images/mug.png" alt="Face of Philip Cowles" /></div>
+            <div id="mug" title="It's me!"><img src="http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/mug.png" alt="Face of Philip Cowles" /></div>
 
             <p className="big">Nice to meet you!</p>
             <p className="loud">I like web design, UX,<br />and interactive stuff.</p>

@@ -2,20 +2,21 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
+
 import { useRouter } from 'next/navigation'
-import { Code, Briefcase, Award, Lightbulb, Heart, ChevronDown } from "lucide-react"
 import Interests from './components/Interests'
 import Contact from './components/Contact'
 import Home from './components/Home'
 import Relics from './components/Relics'
+import Experience from './components/Experience'
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('intro')
   const router = useRouter()
-  const sections = ['home', 'portfolio', 'relic', 'interests', 'contact']
+  const sections = ['home', 'experience', 'relic', 'interests', 'contact']
   const sectionRefs = {
     home: useRef<HTMLElement>(null),
-    portfolio: useRef<HTMLElement>(null),
+    experience: useRef<HTMLElement>(null),
     relic: useRef<HTMLElement>(null),
     interests: useRef<HTMLElement>(null),
     contact: useRef<HTMLElement>(null),
@@ -69,7 +70,7 @@ export default function Portfolio() {
       <div id="nav_ribbon">
         <div id="pc_logo" title="Portfolio of Philip Cowles"></div>
         <ul>
-          <li id="nav_home" title="Home" className="active">
+          {/* <li id="nav_home" title="Home" className="active">
             <a href="#home"><p className="nav-title">Home</p><span className="description">Hello there!</span></a>
             <div className="bar"></div><div className="bar_faded"></div>
           </li>
@@ -88,7 +89,7 @@ export default function Portfolio() {
           <li id="nav_contact" title="Contact">
             <a href="#contact"><p className="nav-title">Contact</p><span className="description">Track me down</span></a>
             <div className="bar"></div><div className="bar_faded"></div>
-          </li>
+          </li> */}
 
           {sections.map((section) => (
             <li
@@ -96,7 +97,9 @@ export default function Portfolio() {
               onClick={() => scrollToSection(section)}
               className="nav-title capitalize text-sm transition-colors font-medium"
             >
-              {section}
+              <div className="nav-title">{section}</div>
+              <span className="description">Description text</span>
+              <div className="bar"></div><div className="bar_faded"></div>
             </li>
           ))}
 
@@ -104,14 +107,13 @@ export default function Portfolio() {
         <div id="nav_down"></div>
       </div>
     </nav>
-      
 
-      <section ref={sectionRefs.home} className="content_section" id="home">
+    <section ref={sectionRefs.home} className="content_section" id="home">
         <Home />
-      </section>
+    </section>
 
-      <section ref={sectionRefs.portfolio} className="content_section" id="portfolio">
-        <Portfolio />
+      <section ref={sectionRefs.experience} className="content_section" id="experience">
+        <Experience />
       </section>
 
       <section ref={sectionRefs.relic} className="content_section" id="relic">
@@ -126,29 +128,29 @@ export default function Portfolio() {
         <Contact />
       </section>
 
-      <footer>
-        <div id="footer_content">
-          <ul>
-            <li><a href="#home">Home</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#relics">Relics</a></li><li><a href="#aboutme">About Me</a></li><li><a href="#contact">Contact</a></li>
-          </ul>
-          <div id="footer_social">
-            <a id="nav_facebook" target="_blank" href="http://www.facebook.com/pcowles">
-              <img src="images/footer_social_facebook.png" alt="Facebook" title="Facebook" />
-            </a>
-            <a id="nav_googleplus" target="_blank" href="http://www.google.com/+PhilipCowles">
-              <img src="images/footer_social_googleplus.png" alt="Google Plus" title="Google+" />
-            </a>
-            <a id="nav_linkedin" target="_blank" href="http://www.linkedin.com/in/cowles">
-              <img src="images/footer_social_linkedin.png" alt="LinkedIn" title="LinkedIn" />
-            </a>
-            <a id="nav_email" href="mailto:philip.cowles@gmail.com">
-              <img src="images/footer_social_email.png" alt="Email Me" title="Email Me" />
-            </a>
-          </div>
-          <div id="footer_name">{new Date().getFullYear()} <span>Philip Cowles</span></div>
-          <div id="back_top"><a href="#home"></a></div>
+    <footer>
+      <div id="footer_content">
+        <ul>
+          <li><a href="#home">Home</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#relics">Relics</a></li><li><a href="#aboutme">About Me</a></li><li><a href="#contact">Contact</a></li>
+        </ul>
+        <div id="footer_social">
+          <a id="nav_facebook" target="_blank" href="http://www.facebook.com/pcowles">
+            <img src="http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/footer_social_facebook.png" alt="Facebook" title="Facebook" />
+          </a>
+          <a id="nav_googleplus" target="_blank" href="http://www.google.com/+PhilipCowles">
+            <img src="http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/footer_social_googleplus.png" alt="Google Plus" title="Google+" />
+          </a>
+          <a id="nav_linkedin" target="_blank" href="http://www.linkedin.com/in/cowles">
+            <img src="http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/footer_social_linkedin.png" alt="LinkedIn" title="LinkedIn" />
+          </a>
+          <a id="nav_email" href="mailto:philip.cowles@gmail.com">
+            <img src="http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/footer_social_email.png" alt="Email Me" title="Email Me" />
+          </a>
         </div>
-      </footer>
-      </>
+        <div id="footer_name">{new Date().getFullYear()} <span>Philip Cowles</span></div>
+        <div id="back_top"><a href="#home"></a></div>
+      </div>
+    </footer>
+  </>
   )
 }

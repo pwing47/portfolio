@@ -17,8 +17,6 @@
   }
 }
 
-@charset "utf-8";
-
 @-ms-viewport {
 	width: device-width;
 }
@@ -28,12 +26,12 @@
 
 /* Text and Layout
 ****************************/
-@font-face {
+/* @font-face {
     font-family: 'Kreon-Regular';
-    src: url('/public/fonts/Kreon-Regular.eot?#iefix') format('embedded-opentype'),
-         url('/public/fonts/Kreon-Regular.woff') format('woff'),
-         url('/public/fonts/Kreon-Regular.ttf') format('truetype'),
-         url('/public/fonts/Kreon-Regular.svg#Kreon-Regular') format('svg');
+    src: url('/fonts/Kreon-Regular.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Kreon-Regular.woff') format('woff'),
+         url('/fonts/Kreon-Regular.ttf') format('truetype'),
+         url('/fonts/Kreon-Regular.svg#Kreon-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -46,9 +44,9 @@
          url('/public/fonts/Kreon-Bold.svg#Kreon-Bold') format('svg');
     font-weight: normal;
     font-style: normal;
-}
+} */
 
-@font-face {
+/* @font-face {
     font-family: 'Whitney';
     src: url('/public/fonts/whitney-bold-webfont.eot?#iefix') format('embedded-opentype'),
          url('/public/fonts/whitney-bold-webfont.woff') format('woff'),
@@ -56,7 +54,7 @@
          url('/public/fonts/whitney-bold-webfont.svg#Whitney') format('svg');
     font-weight: normal;
     font-style: normal;
-}
+} */
 
 body {
 	margin: 0;
@@ -269,8 +267,8 @@ li:hover .bar_faded { background: rgba(0,0,0,0.04); }
 }
 
 #home {			background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #d0f1f0; }
-#portfolio {	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_portfolio_top.png) repeat-x, url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #c7daff; }
-#relics {		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_relics_top.png) repeat-x, url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #ddf2db; }
+#experience {	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_portfolio_top.png) repeat-x, url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #c7daff; }
+#relic {		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_relics_top.png) repeat-x, url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #ddf2db; }
 #aboutme { 		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_aboutme_top.png) repeat-x, url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #f9daca; }
 #contact {		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_contact_top.png) repeat-x, url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #f3e5f3; margin-bottom: -3.5em;  }
 #sub_footer {	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images//images/bg_relics_top.png) repeat-x, url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images//images/bg_noise.png) repeat, #f3e5f3; padding-top: 2.5em; margin-bottom: -3.5em;  }

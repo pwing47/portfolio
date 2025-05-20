@@ -3,7 +3,7 @@ const Interests = () => {
         <div className="content">
           <span className="pre_header">A little bit</span>
           <h2>About Me</h2>
-          <img id="about_ps" src="images/about_ps.png" alt="Photoshop 4 through today" title="The tools have a changed a bit" />
+          <img id="about_ps" src="http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/about_ps.png" alt="Photoshop 4 through today" title="The tools have a changed a bit" />
           <p>&nbsp;</p>
           <p>After building my first website in 5th grade, I became friends with Photoshop, Dreamweaver, and Flash. The rest, I suppose, is history.</p>
           <p>&nbsp;</p>
