@@ -2,25 +2,32 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
-
 import { useRouter } from 'next/navigation'
-import Interests from './components/Interests'
-import Contact from './components/Contact'
 import Home from './components/Home'
-import Relics from './components/Relics'
+import Certifications from './components/Certifications'
 import Experience from './components/Experience'
+import Projects from './components/Projects'
+import Interests from './components/Interests'
+import Skills from './components/Skills'
+import { Inter } from 'next/font/google';
+
+const inter = Inter({
+  subsets: ["latin"],
+});
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('intro')
   const router = useRouter()
-  const sections = ['home', 'experience', 'relic', 'interests', 'contact']
+  const sections = ['skills', 'experience', 'certifications', 'projects', 'interests']
   const sectionRefs = {
     home: useRef<HTMLElement>(null),
+    skills: useRef<HTMLElement>(null),
     experience: useRef<HTMLElement>(null),
-    relic: useRef<HTMLElement>(null),
+    certifications: useRef<HTMLElement>(null),
+    projects: useRef<HTMLElement>(null),
     interests: useRef<HTMLElement>(null),
-    contact: useRef<HTMLElement>(null),
   }
+  const sectionDescs = ['Things I\'m good at','Adventures in the real world','Badges of honor','My creative playground','Passions and hobbies'];
 
   // Update URL based on active section
   useEffect(() => {
@@ -66,39 +73,18 @@ export default function Portfolio() {
 
   return (    
     <>
-    <nav>
-      <div id="nav_ribbon">
+    <nav className="fixed hidden md:flex t-0 w-100 md:w-1/3 justify-end">
+      <div id="nav_ribbon" className="p-3 mr-10">
         <div id="pc_logo" title="Portfolio of Philip Cowles"></div>
         <ul>
-          {/* <li id="nav_home" title="Home" className="active">
-            <a href="#home"><p className="nav-title">Home</p><span className="description">Hello there!</span></a>
-            <div className="bar"></div><div className="bar_faded"></div>
-          </li>
-          <li id="nav_portfolio" title="Portfolio">
-            <a href="#portfolio"><p className="nav-title">Portfolio</p><span className="description">Things I've made</span></a>
-            <div className="bar"></div><div className="bar_faded"></div>
-          </li>
-          <li id="nav_relics" title="Relics">
-            <a href="#relics"><p className="nav-title">Relics</p><span className="description">Old, but not forgotten</span></a>
-            <div className="bar"></div><div className="bar_faded"></div>
-          </li>
-          <li id="nav_aboutme" title="About Me">
-            <a href="#aboutme"><p className="nav-title">About Me</p><span className="description">Other stuff I like</span></a>
-            <div className="bar"></div><div className="bar_faded"></div>
-          </li>
-          <li id="nav_contact" title="Contact">
-            <a href="#contact"><p className="nav-title">Contact</p><span className="description">Track me down</span></a>
-            <div className="bar"></div><div className="bar_faded"></div>
-          </li> */}
-
-          {sections.map((section) => (
+          {sections.map((section, index) => (
             <li
               key={section}
               onClick={() => scrollToSection(section)}
-              className="nav-title capitalize text-sm transition-colors font-medium"
+              className={`transition-colors cursor-pointer border-b border-gray-200 p-3`}
             >
-              <div className="nav-title">{section}</div>
-              <span className="description">Description text</span>
+              <div className={`${inter.className} antialiased capitalize tracking-tight text-2xl font-extrabold`}>{section}</div>
+              <span className="text-gray-400">{sectionDescs[index]}</span>
               <div className="bar"></div><div className="bar_faded"></div>
             </li>
           ))}
@@ -112,21 +98,27 @@ export default function Portfolio() {
         <Home />
     </section>
 
+    <section ref={sectionRefs.skills} className="content_section" id="skills">
+        <Skills />
+    </section>
+
       <section ref={sectionRefs.experience} className="content_section" id="experience">
         <Experience />
       </section>
 
-      <section ref={sectionRefs.relic} className="content_section" id="relic">
-        <Relics />
+      <section ref={sectionRefs.certifications} className="content_section" id="certifications">
+        <Certifications />
+      </section>
+
+      <section ref={sectionRefs.projects} className="content_section" id="projects">
+        <Projects />
       </section>
       
-      <section ref={sectionRefs.interests} className="content_section" id="aboutme">
+      <section ref={sectionRefs.interests} className="content_section" id="interests">
         <Interests />
       </section>
 
-      <section ref={sectionRefs.contact} className="content_section" id="contact">
-        <Contact />
-      </section>
+      
 
     <footer>
       <div id="footer_content">

@@ -1,8 +1,13 @@
-const Relics = () => {
+import { Inter } from 'next/font/google';
+
+const inter = Inter({
+  subsets: ["latin"],
+});
+
+const Certifications = () => {
     return (
-        <div className="content">
-          <h2>Relics</h2>
-          <p>Early work that got me in the right direction.<br />These guys stick around for old times' sake.</p>
+        <div className="content py-10">
+          <h2 className={`${inter.className} text-4xl capitalize font-extrabold tracking-tight`}>Certifications</h2>
 
           <div className="project_preview">
             <a href="projects/mayroach"><div className="project_thumb" id="mayroach"><img alt="May Roach Hall" src="http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/preview_mayroach.jpg" /></div>
@@ -28,4 +33,4 @@ const Relics = () => {
     )
 }
 
-export default Relics
+export default Certifications

@@ -1,7 +1,14 @@
-const Contact = () => {
+import { Inter } from 'next/font/google';
+
+const inter = Inter({
+  subsets: ["latin"],
+});
+
+const Projects = () => {
     return (
-        <div className="content">
-          <h2>Contact Me</h2>
+        <div className="content py-10">
+          <h2 className={`${inter.className} text-4xl capitalize font-extrabold tracking-tight`}>Projects</h2>
+
           <p>Let's chat! <a href="mailto:philip.cowles@gmail.com">Email me</a> or use the form to get in touch.</p>
 
           <div id="contact_form">
@@ -24,4 +31,4 @@ const Contact = () => {
     )
 }
 
-export default Contact
+export default Projects

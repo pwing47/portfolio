@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Kreon } from "next/font/google";
+import { Kreon, Inter } from "next/font/google";
 import "./globals.css";
 
 const kreon = Kreon({
-  variable: "--font-kreon",
   subsets: ["latin"],
 });
 
@@ -18,8 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${kreon.variable} antialiased`}>
+    <html lang="en" className={`${kreon.className} antialiased`}>
+      <body>
         {children}
       </body>
     </html>
