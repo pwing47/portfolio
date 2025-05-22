@@ -1,10 +1,17 @@
 
+import { Inter } from 'next/font/google';
+
+const inter = Inter({
+  subsets: ["latin"],
+});
+
 const Skills = () => {
     return (
         <div className="content py-10">
 
-            
-            <p className="text-teal-800 text-2xl mt-8">Here are a few things I'm good at:</p>
+            <h2 className={`${inter.className} text-4xl capitalize font-extrabold tracking-tight`}>Skills</h2>
+
+            <p className="text-teal-800 text-2xl mt-8">A few things I'm good at</p>
             
             <div className="mt-4 skills-grid grid grid-cols-6 gap-4 w-1/2">
 

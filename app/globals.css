@@ -170,17 +170,20 @@ li:hover .bar_faded { background: rgba(0,0,0,0.04); }
 ***************************/
 .content_section {
 	width: 100%;
-	overflow: hidden; 
+	mask: conic-gradient(from -60deg at bottom,#0000,#000 1deg 119deg,#0000 120deg) 50%/34.64px 100%;
+	margin-top: -30px;
+	position: relative;
 }
 .content {
 	padding-left: 33%;
+	
 }
 
-#home {			background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #d0f1f0; }
-#skills {	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #c7daff; }
-#experience {		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #ddf2db; }
-#certifications { 		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #f9daca; }
-#projects {		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #f3e5f3; margin-bottom: -3.5em;  }
+#home {			background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #d0f1f0; z-index: 5; }
+#skills {	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #f9f9f9; z-index:4; }
+#experience {		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #ddf2db; z-index: 3; }
+#certifications { 		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #f9daca; z-index: 2; }
+#projects {		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #f3e5f3; z-index: 1;  }
 
 #sub_footer {	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images//images/bg_relics_top.png) repeat-x, url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images//images/bg_noise.png) repeat, #f3e5f3; padding-top: 2.5em; margin-bottom: -3.5em;  }
 #sub_footer.relic {	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/images/bg_aboutme_top.png) repeat-x, url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images//images/bg_noise.png) repeat, #f3e5f3; }
@@ -212,6 +215,9 @@ li:hover .bar_faded { background: rgba(0,0,0,0.04); }
 	background-repeat: no-repeat;
 	background-position: center;
 	cursor: pointer;
+
+	background-color: rgba(0,0,0,0.033);
+	border-radius: 100px;
 }
 
 #skill_photoshop { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_photoshop.png); }

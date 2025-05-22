@@ -27,7 +27,7 @@ export default function Portfolio() {
     projects: useRef<HTMLElement>(null),
     interests: useRef<HTMLElement>(null),
   }
-  const sectionDescs = ['Things I\'m good at','Adventures in the real world','Badges of honor','My creative playground','Passions and hobbies'];
+  const sectionDescs = ['A few things I\'m good at','Adventures in the real world','Proven knowledge','My creative playground','Passions and hobbies'];
 
   // Update URL based on active section
   useEffect(() => {
@@ -73,7 +73,7 @@ export default function Portfolio() {
 
   return (    
     <>
-    <nav className="fixed hidden md:flex t-0 w-100 md:w-1/3 justify-end">
+    <nav className="fixed z-10 hidden md:flex t-0 w-100 md:w-1/3 justify-end">
       <div id="nav_ribbon" className="p-3 mr-10">
         <div id="pc_logo" title="Portfolio of Philip Cowles"></div>
         <ul>

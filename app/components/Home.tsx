@@ -15,13 +15,25 @@ const Home = () => {
             <div id="mug" title="It's me!"><img src="http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/mug.png" alt="Face of Philip Cowles" /></div>
 
             <p className="text-teal-800 text-2xl mt-8">Nice to meet you!</p>
-            <p className={`${inter.className} text-teal-950 text-5xl font-extrabold tracking-tight`}>I like web design, UX,<br />and interactive stuff.</p>
+            <p className={`${inter.className} text-teal-950 text-5xl font-bold tracking-tight`}>I like web design, UX,<br />and interactive stuff.</p>
             
           </div>
 
           <div className="flex mt-6">
-            <div className="btn-link text-2xl font-bold py-3 px-10 m-6 ml-0 rounded-full">Resume</div>
-            <div className="btn-link text-2xl font-bold py-3 px-10 m-6 ml-0 rounded-full">LinkedIn</div>
+            <div className="btn-link text-2xl font-bold py-3 px-10 pl-6 m-6 ml-0 rounded-full flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6 mx-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+              </svg>
+              <span>Resume</span>
+            </div>
+
+            <div className="btn-link text-2xl font-bold py-3 px-10 pl-6 m-6 ml-0 rounded-full flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6 mx-2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            </svg>
+              <span>LinkedIn</span>
+            </div>
+
           </div>
           
 
