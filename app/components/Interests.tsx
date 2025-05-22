@@ -25,7 +25,7 @@ const Interests = () => {
           <h2>Interests</h2>
           <div className="interest" id="interest_concerts">
             <h4>Concerts</h4>
-            <span className="description">Nothin' quite like front row</span>
+            <span className="description">Nothing quite like front row</span>
             <div className="pic"></div>
           </div>
           <div className="interest" id="interest_ultimate">
@@ -35,7 +35,7 @@ const Interests = () => {
           </div>
           <div className="interest" id="interest_running">
             <h4>Running</h4>
-            <span className="description">I'm told I have a lot of shoes</span>
+            <span className="description">I guess I have a lot of shoes</span>
             <div className="pic"></div>
           </div>
           <div className="interest" id="interest_webdesign">
@@ -50,7 +50,7 @@ const Interests = () => {
           </div>
           <div className="interest" id="interest_books">
             <h4>Books</h4>
-            <span className="description">Because learning is da' bomb</span>
+            <span className="description">Learning is the bomb</span>
             <div className="pic"></div>
           </div>
         </div>

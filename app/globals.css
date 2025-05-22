@@ -181,7 +181,7 @@ li:hover .bar_faded { background: rgba(0,0,0,0.04); }
 
 #home {			background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #d0f1f0; z-index: 5; }
 #skills {	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #f9f9f9; z-index:4; }
-#experience {		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #ddf2db; z-index: 3; }
+#experience {		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #ddd; z-index: 3; }
 #certifications { 		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #f9daca; z-index: 2; }
 #projects {		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #f3e5f3; z-index: 1;  }
 

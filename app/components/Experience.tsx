@@ -1,3 +1,6 @@
+"use client";
+import { useEffect } from 'react';
+import AOS from 'aos';
 import { Inter } from 'next/font/google';
 
 const inter = Inter({
@@ -5,23 +8,141 @@ const inter = Inter({
 });
 
 const Experience = () => {
+
+    useEffect(() => {
+      AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: 'aos-init', // class applied after initialization
+        animatedClassName: 'aos-animate', // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing/scrolling (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling (advanced)
+        
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 400, // values from 0 to 3000, with step 50ms
+        easing: 'ease', // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+      });
+    }, []);
+
     return (
         <div className="content py-10">
 
           <h2 className={`${inter.className} text-4xl capitalize font-extrabold tracking-tight`}>Experience</h2>
 
-          <div className="flex">
-            <div className="flex flex-col w-1/2">
-              <h2>Work History</h2>
-              <div>Timeline here</div>
-            </div>
-            <div className="flex flex-col w-1/3">
-              <h2>Education</h2>
-              <div>Timeline here</div>
-            </div>
-          </div>
+          <div className="grid grid-cols-2 max-sm:grid-cols-1 max-sm:grid-flow-row">
+            <div className={`${inter.className}`}>
+              <h3>Work History</h3>
+              <div className="-my-6">
+                <div className="relative pl-8 sm:pl-32 py-6 group aos-init aos-animate" data-aos="fade-up" data-aos-delay="0">
 
-        </div>          
+                  <div className="tracking-tight text-md max-sm:text-left text-slate-400 mb-1 sm:mb-0 max-sm:mb-0">Sub-Zero Wolf</div>
+                  
+                  <div className="flex flex-col sm:flex-row items-center mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-slate-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5 max-sm:text-left max-sm:items-start">
+                    <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-medium w-24 h-10 max-sm:h-4 mb-3 sm:mb-0 text-slate-600 bg-slate-100 rounded-full max-sm:bg-transparent max-sm:text-white max-sm:text-left max-sm:mb-0 max-sm:-ml-3">2023 - Now</time>
+                    <div className="text-ld text-slate-800 font-bold tracking-tight max-sm:text-left">Web Development Technical Lead</div>
+                  </div>
+
+                  <div className="text-slate-500 text-xs w-[90%] max-sm:w-full max-sm:text-left">
+                    Provide technical guidance and leadership of Sitecore and AEM web development and mobile application teams
+                  </div>
+                </div>
+
+                <div className="relative pl-8 sm:pl-32 py-6 group aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                  
+                  {/* <div className="tracking-tight text-md max-sm:text-left text-slate-400 mb-1 sm:mb-0 max-sm:mb-0">Sub-Zero Wolf</div> */}
+
+                  <div className="flex flex-col sm:flex-row items-center mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-slate-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5 max-sm:text-left max-sm:items-start">
+                  <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-medium w-24 h-10 max-sm:h-4 mb-3 sm:mb-0 text-slate-600 bg-slate-100 rounded-full max-sm:bg-transparent max-sm:text-white max-sm:text-left max-sm:mb-0 max-sm:-ml-3">2019 - 2023</time>
+                  <div className="text-ld text-slate-800 font-bold tracking-tight max-sm:text-left">Sitecore Web Developer/Analyst</div></div>
+                  <div className="text-slate-500 text-[12px] w-[90%] max-sm:w-full max-sm:text-left">                    
+                    Develop and maintain public-facing and internal websites while assisting marketing CMS content authors
+                  </div>
+                </div>
+
+                <div className="relative pl-8 sm:pl-32 py-6 group aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                    <div className="tracking-tight text-md max-sm:text-left text-slate-400 mb-1 sm:mb-0 max-sm:mb-0">Saris Cycling Group</div>
+
+                    <div className="flex flex-col sm:flex-row items-center mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-slate-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5 max-sm:text-left max-sm:items-start"><time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-medium w-24 h-10 max-sm:h-4 mb-3 sm:mb-0 text-slate-600 bg-slate-100 rounded-full max-sm:bg-transparent max-sm:text-white max-sm:text-left max-sm:mb-0 max-sm:-ml-3"> 2015 - 2019</time>
+                      <div className="text-ld text-slate-800 font-bold tracking-tight max-sm:text-left">Digital Marketing Manager &amp; Developer</div>
+                    </div>
+
+                    <div className="text-slate-500 text-[12px] w-[90%] max-sm:w-full max-sm:text-left text-justify">
+                      Oversee the design, development, and CMS content authoring of six company websites leveraging a C# .NET based CMS
+                    </div>
+                </div>
+
+                <div className="relative pl-8 sm:pl-32 py-6 group aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                    <div className="tracking-tight text-md max-sm:text-left text-slate-400 mb-1 sm:mb-0 max-sm:mb-0">Epic</div>
+
+                    <div className="flex flex-col sm:flex-row items-center mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-slate-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5 max-sm:text-left max-sm:items-start"><time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-medium w-24 h-10 max-sm:h-4 mb-3 sm:mb-0 text-slate-600 bg-slate-100 rounded-full max-sm:bg-transparent max-sm:text-white max-sm:text-left max-sm:mb-0 max-sm:-ml-3"> 2012 - 2015</time>
+                      <div className="text-ld text-slate-800 font-bold tracking-tight max-sm:text-left">UX Designer</div>
+                    </div>
+
+                    <div className="text-slate-500 text-[12px] w-[90%] max-sm:w-full max-sm:text-left text-justify">I'll design responsive websites, implement Figma designs, collaborate on UI/UX, use React, Next.js, and Tailwind CSS, write clean code, and ensure compatibility across devices.
+                    </div>
+                </div>
+
+                <div className="relative pl-8 sm:pl-32 py-6 group aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+                  <div className="tracking-tight text-md max-sm:text-left text-slate-400 mb-1 sm:mb-0 max-sm:mb-0">ZubaWing LLC</div>
+                <div className="flex flex-col sm:flex-row items-center mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-slate-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5 max-sm:text-left max-sm:items-start">
+                  <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-medium w-24 h-10 max-sm:h-4 mb-3 sm:mb-0 text-slate-600 bg-slate-100 rounded-full max-sm:bg-transparent max-sm:text-white max-sm:text-left max-sm:mb-0 max-sm:-ml-3"> 2010 - 2012</time>
+                  <div className="text-ld text-slate-800 font-bold tracking-tight max-sm:text-left">Application Developer</div>
+                </div>
+                <div className="text-slate-500 text-[12px] w-[90%] max-sm:w-full max-sm:text-left text-justify">
+                I'll design responsive websites, implement Figma designs, collaborate on UI/UX, use React, Next.js, and Tailwind CSS, write clean code, and ensure compatibility across devices.
+                </div>
+                </div>
+				    </div>
+				  </div>
+
+          {/* Education */}
+				  <div>
+            <h3>Education</h3>
+            <div>
+
+              <div className="-my-6 max-sm:my-2">
+                <div className="relative pl-8 sm:pl-32 py-6 group aos-init aos-animate" data-aos="fade-up" data-aos-delay="0">
+                  
+                  <div className="font-medium text-[15px] max-sm:text-left text-slate-500 mb-1 sm:mb-0 max-sm:mb-0">Assam Science and Technology University</div>
+                  
+                  <div className="flex flex-col sm:flex-row items-center mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-slate-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5 max-sm:text-left max-sm:items-start">
+                    <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-medium w-24 h-10 max-sm:h-4 mb-3 sm:mb-0 text-slate-600 bg-slate-100 rounded-full max-sm:bg-transparent max-sm:text-white max-sm:text-left max-sm:mb-0 max-sm:-ml-3"> 2022 - 2024</time>
+                    
+                    <div className="text-md font-bold text-white max-sm:text-left">Master of Computer Applications</div>
+                  </div>
+                
+                  <div className="text-slate-500 text-[12px] w-[90%] max-sm:w-full max-sm:text-left text-justify">Currently pursuing a Master of Computer Applications at Assam Science and Technology University, focused on building coding skills and more.
+                  </div>
+                </div>
+                
+                <div className="relative pl-8 sm:pl-32 py-6 group aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"><div className="font-medium text-[15px] max-sm:text-left text-slate-500 mb-1 sm:mb-0 max-sm:mb-0">Gauhati University</div><div className="flex flex-col sm:flex-row items-center mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-slate-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5 max-sm:text-left max-sm:items-start"><time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-medium w-24 h-10 max-sm:h-4 mb-3 sm:mb-0 text-slate-600 bg-slate-100 rounded-full max-sm:bg-transparent max-sm:text-white max-sm:text-left max-sm:mb-0 max-sm:-ml-3"> 2018-2021</time><div className="text-md font-bold text-white max-sm:text-left">Bachelor of Computer Applications</div></div><div className="text-slate-500 text-[12px] w-[90%] max-sm:w-full max-sm:text-left text-justify">Graduated with a Bachelor of Computer Applications from Gauhati University in 2021, laying the foundation for a career in technology.</div></div><div className="relative pl-8 sm:pl-32 py-6 group aos-init aos-animate" data-aos="fade-up" data-aos-delay="200"><div className="font-medium text-[15px] max-sm:text-left text-slate-500 mb-1 sm:mb-0 max-sm:mb-0">Muhila Home Junior College</div><div className="flex flex-col sm:flex-row items-center mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-slate-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5 max-sm:text-left max-sm:items-start">
+                
+                <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-medium w-24 h-10 max-sm:h-4 mb-3 sm:mb-0 text-slate-600 bg-slate-100 rounded-full max-sm:bg-transparent max-sm:text-white max-sm:text-left max-sm:mb-0 max-sm:-ml-3"> 2015-2017</time>
+                  
+                  <div className="text-md font-bold text-white max-sm:text-left">HS (Science)</div>
+                  </div>
+
+                  <div className="text-slate-500 text-[12px] w-[90%] max-sm:w-full max-sm:text-left text-justify">
+                    Completed HS (Science) from Muhila Home Junior College in 2017, marking the initial steps towards a journey in academia.
+                  </div>
+
+
+                </div>
+              </div> 
+            </div>
+					</div>
+
+				</div>
+          
+      </div>
     )
 }
 

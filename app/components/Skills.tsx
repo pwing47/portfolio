@@ -40,6 +40,81 @@ const Skills = () => {
                 <div id="skill_photography" className="tooltip" data-title="Photography"></div>
 
             </div>
+
+            <div className="grid">
+
+              {/* CMS */}
+              <div>Sitecore</div>
+              <div>Adobe AEM</div>
+              <div>Adobe Commerce</div>
+              <div>BigCommerce</div>
+              <div>Drupal</div>
+              <div>Joomla</div>
+              <div>WordPress</div>
+              <div>MS Dynamics 365</div>
+
+              {/* <div>Front end dev ---</div> */}
+              <div>HTML5</div>
+              <div>CSS3</div>
+              <div>Typescript</div>
+              <div>Tailwind</div>
+              <div>NextJS</div>
+              <div>React</div>
+              <div>Angular</div>
+
+              {/* <div>Back end dev ---</div> */}
+              <div>.NET</div>
+              <div>C#</div>
+              <div>Azure</div>
+              <div>MS SQL</div>
+              <div>MySQL</div>
+              <div>GraphQL</div>
+              <div>IIS</div>
+              <div>Docker</div>
+              <div>Git</div>
+              <div>REST APIs</div>              
+              <div>Ionic</div>
+              
+              {/* <div>Digital marketing ---</div> */}
+              <div>CMS Content Authoring</div>
+              <div>Braze</div>
+              <div>MailChimp</div>
+              <div>SEMRush</div>
+              <div>ahrefs</div>
+              <div>Google Search Console</div>
+              <div>SEO</div>
+              <div>Keyword Research</div>
+              <div>Link Building </div>
+              <div>Retargeting</div>
+              <div>Web Accessibility</div>
+              <div>Google Lighthouse</div>
+              
+              {/* <div>UI/UX Design ---</div> */}
+              <div>Figma</div>
+              <div>Photoshop</div>
+              <div>Illustrator</div>
+              <div>Premiere</div>
+              <div>Animate</div>
+              <div>Usability Testing</div>
+              <div>A/B Testing</div>
+              <div>Eye Tracking </div>
+              <div>Balsamiq</div>
+              
+              {/* <div>Tools ---</div> */}
+              <div>Visual Studio</div>
+              <div>VS Code</div>
+              <div>Postman</div>
+              <div>Android Studio</div>
+              <div>Cloudflare</div>
+              <div>New Relic</div>
+              <div>ServiceNOW</div>
+              <div>Azure DevOps</div>
+              <div>Jira</div>
+              <div>Vercel </div>
+              <div>Supabase</div>
+
+            </div>
+
           </div>
     )
 }
