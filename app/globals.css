@@ -179,7 +179,7 @@ li:hover .bar_faded { background: rgba(0,0,0,0.04); }
 	
 }
 
-#home {			background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, linear-gradient(180deg,rgba(249, 249, 249, 1) 0%,  rgba(213, 232, 242, 1) 100%); z-index: 5; }
+#home {			background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, linear-gradient(180deg,rgba(249, 249, 249, 1) 0%,  rgba(213, 232, 242, 1) 100%); z-index: 5; }  
 #skills {	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, linear-gradient(180deg,rgba(249, 249, 249, 1) 0%, rgba(224, 242, 213, 1) 100%); z-index:4; } 
 #experience {		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, linear-gradient(180deg,rgba(249, 249, 249, 1) 0%, rgba(245, 225, 233, 1) 100%); z-index: 3; }
 #certifications { 		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, linear-gradient(180deg,rgba(249, 249, 249, 1) 0%, rgba(245, 239, 225, 1) 100%); z-index: 2; }   
@@ -264,9 +264,6 @@ li:hover .bar_faded { background: rgba(0,0,0,0.04); }
 
 /* Portfolio and Relics Content
 *******************************************/
-#portfolio p { color: #3e4f84; }
-#relics p { color: #44853e; }
-
 .project_preview {
 	width: 455px;	
 	float: left;	
@@ -305,6 +302,12 @@ li:hover .bar_faded { background: rgba(0,0,0,0.04); }
 	font-weight: bold;
 	font-size: 2.9em;
 	color: #fff;
+}
+
+/* Certifications
+********************/
+.certification-card {
+	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_nav.png) repeat, #fff;
 }
 
 /* Project Page

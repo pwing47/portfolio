@@ -94,27 +94,27 @@ export default function Portfolio() {
       </div>
     </nav>
 
-    <section ref={sectionRefs.home} className="content_section" id="home">
+    <section ref={sectionRefs.home} className="content_section pt-10" id="home">
         <Home />
     </section>
 
-    <section ref={sectionRefs.skills} className="content_section" id="skills">
+    <section ref={sectionRefs.skills} className="content_section pt-8" id="skills">
         <Skills />
     </section>
 
-      <section ref={sectionRefs.experience} className="content_section" id="experience">
+      <section ref={sectionRefs.experience} className="content_section pt-8" id="experience">
         <Experience />
       </section>
 
-      <section ref={sectionRefs.certifications} className="content_section" id="certifications">
+      <section ref={sectionRefs.certifications} className="content_section pt-8" id="certifications">
         <Certifications />
       </section>
 
-      <section ref={sectionRefs.projects} className="content_section" id="projects">
+      <section ref={sectionRefs.projects} className="content_section pt-8" id="projects">
         <Projects />
       </section>
       
-      <section ref={sectionRefs.interests} className="content_section" id="interests">
+      <section ref={sectionRefs.interests} className="content_section pt-8" id="interests">
         <Interests />
       </section>
 

@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google';
-
+import Image from 'next/image';
 const inter = Inter({
   subsets: ["latin"],
 });
@@ -9,24 +9,42 @@ const Projects = () => {
         <div className="content py-10">
           <h2 className={`${inter.className} text-4xl capitalize font-extrabold tracking-tight`}>Projects</h2>
 
-          <p>Let's chat! <a href="mailto:philip.cowles@gmail.com">Email me</a> or use the form to get in touch.</p>
+          <div className="w-7/8">
+          
+          <h3>Consonance</h3>
+          <p>Word game for Android and iOS</p>
 
-          <div id="contact_form">
-            <span className="pre_header">Name</span>
-            <div className="input_wrapper"><input type="text" id="txt_name" name="txt_name" /></div>
-            <div id="error_name" className="form_error"></div>
-
-            <span className="pre_header">Email</span>
-            <div className="input_wrapper"><input type="text" id="txt_email" name="txt_email" /></div>
-            <div id="error_email" className="form_error"></div>
-
-            <span className="pre_header">Message</span>
-            <div className="input_wrapper"><textarea id="txt_message" name="txt_message"></textarea></div>
-            <div id="error_message" className="form_error"></div>
-
-            <input id="btn_send" name="submit" type="submit" value="Send Away!" />
+          <div className="my-4">
+          <p>
+This word game leverages an innovative word and hint algorithm built with Angular, TypeScript, and OpenAI API.
+</p><p>
+Players experience a mix of jumbled letters where not all is as it seems, and must navigate through strategically-placed decoy letters.
+</p><p>
+Players can choose daily challenges, practice mode to keep skills sharp, or attempt to unlock 50 unique achievements.</p>
           </div>
-          <div id="form_success"><h4>Thanks for your message!</h4>I'll get back to you soon!</div>
+
+          <div className="flex my-4">
+
+          <Image src="/playstore.svg" width="180" height="53"  alt="Google Play Store" />
+          <Image src="/appstore.png" width="150" height="30"  alt="Apple App Store" />
+          </div>
+
+          
+
+          
+
+          <div className="grid grid-cols-4 gap-4">
+          <Image width="230" height="498" alt="Consonance screenshot" src="/consonance1.webp" className="shadow-lg rounded-md" />
+          <Image width="230" height="498" alt="Consonance screenshot" src="/consonance1.webp" className="shadow-lg rounded-md" />
+          <Image width="230" height="498" alt="Consonance screenshot" src="/consonance1.webp" className="shadow-lg rounded-md" />
+          <Image width="230" height="498" alt="Consonance screenshot" src="/consonance1.webp" className="shadow-lg rounded-md" />
+          </div>
+          
+          
+          
+          
+          </div>
+          
         </div>
     )
 }
