@@ -1,3 +1,4 @@
+import { Link } from 'lucide-react';
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
 const inter = Inter({
@@ -9,35 +10,43 @@ const Projects = () => {
         <div className="content py-10">
           <h2 className={`${inter.className} text-4xl capitalize font-extrabold tracking-tight`}>Projects</h2>
 
-          <div className="w-7/8">
+          <div className="w-full lg:w-7/8 mt-8">
           
-          <h3>Consonance</h3>
-          <p>Word game for Android and iOS</p>
+          <h3 className={`${inter.className} text-2xl capitalize font-extrabold tracking-tight`}>Consonance</h3>
+          <p className="text-xl">Word game for Android and iOS</p>
 
-          <div className="my-4">
-          <p>
-This word game leverages an innovative word and hint algorithm built with Angular, TypeScript, and OpenAI API.
-</p><p>
-Players experience a mix of jumbled letters where not all is as it seems, and must navigate through strategically-placed decoy letters.
-</p><p>
-Players can choose daily challenges, practice mode to keep skills sharp, or attempt to unlock 50 unique achievements.</p>
-          </div>
+          <ul className="my-4 list-disc lg:ml-6 w-full lg:w-3/4">
+          <li className="p-2">
+This word game leverages an innovative hint algorithm built with Angular and OpenAI API.
+</li>
+<li className="p-2">
+Players experience a mix of letters and must navigate through strategically-placed decoy letters.
+</li>
+<li className="p-2">
+Choose daily challenges, practice mode, or attempt to unlock 50 unique achievements.
+          </li></ul>
 
-          <div className="flex my-4">
+          <div className="flex my-4 justify-center lg:justify-start">
 
-          <Image src="/playstore.svg" width="180" height="53"  alt="Google Play Store" />
+          <a href="https://play.google.com/store/apps/details?id=com.philipcowles.consonance&hl=en_US">
+            <Image src="/playstore.svg" width="180" height="53"  alt="Google Play Store" />
+          </a>
+          
+          <a href="https://apps.apple.com/us/app/consonance/id6569233995">
           <Image src="/appstore.png" width="150" height="30"  alt="Apple App Store" />
+          
+          </a>
           </div>
 
           
 
           
 
-          <div className="grid grid-cols-4 gap-4">
-          <Image width="230" height="498" alt="Consonance screenshot" src="/consonance1.webp" className="shadow-lg rounded-md" />
-          <Image width="230" height="498" alt="Consonance screenshot" src="/consonance1.webp" className="shadow-lg rounded-md" />
-          <Image width="230" height="498" alt="Consonance screenshot" src="/consonance1.webp" className="shadow-lg rounded-md" />
-          <Image width="230" height="498" alt="Consonance screenshot" src="/consonance1.webp" className="shadow-lg rounded-md" />
+          <div className="grid grid-cols-4 gap-4 mt-12 mx-8 lg:mx-0 content-evenly">
+          <Image width="810" height="1440" alt="Consonance gameplay" src="/consonance1.webp" className="shadow-lg rounded-md" />
+          <Image width="810" height="1440" alt="Consonance main menu" src="/consonance2.webp" className="shadow-lg rounded-md" />
+          <Image width="810" height="1440" alt="Consonance game menus" src="/consonance3.webp" className="shadow-lg rounded-md" />
+          <Image width="810" height="1440" alt="Consonance achievements" src="/consonance4.webp" className="shadow-lg rounded-md" />
           </div>
           
           

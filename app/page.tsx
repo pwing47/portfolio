@@ -73,7 +73,7 @@ export default function Portfolio() {
 
   return (    
     <>
-    <nav className="fixed z-10 hidden md:flex t-0 w-100 md:w-1/3 justify-end">
+    <nav className="fixed hidden z-10 lg:flex t-0 w-100 md:w-1/3 justify-end">
       <div id="nav_ribbon" className="p-3 mr-10">
         <div id="pc_logo" title="Portfolio of Philip Cowles"></div>
         <ul>
@@ -114,7 +114,7 @@ export default function Portfolio() {
         <Projects />
       </section>
       
-      <section ref={sectionRefs.interests} className="content_section pt-8" id="interests">
+      <section ref={sectionRefs.interests} className="content_section pt-8 pb-24" id="interests">
         <Interests />
       </section>
 
@@ -122,27 +122,19 @@ export default function Portfolio() {
 
     <footer>
       <div id="footer_content">
-        <ul>
-          <li><a href="#home">Home</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#relics">Relics</a></li><li><a href="#aboutme">About Me</a></li><li><a href="#contact">Contact</a></li>
+
+        <div id="back_top"><a href="#" className="block"></a></div>
+
+        <ul className="my-4">
+          <li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li><li><a href="#certifications">Certifications</a></li><li><a href="#projects">Projects</a></li><li><a href="#interests">Interests</a></li>
         </ul>
-        <div id="footer_social">
-          <a id="nav_facebook" target="_blank" href="http://www.facebook.com/pcowles">
-            <img src="http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/footer_social_facebook.png" alt="Facebook" title="Facebook" />
-          </a>
-          <a id="nav_googleplus" target="_blank" href="http://www.google.com/+PhilipCowles">
-            <img src="http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/footer_social_googleplus.png" alt="Google Plus" title="Google+" />
-          </a>
-          <a id="nav_linkedin" target="_blank" href="http://www.linkedin.com/in/cowles">
-            <img src="http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/footer_social_linkedin.png" alt="LinkedIn" title="LinkedIn" />
-          </a>
-          <a id="nav_email" href="mailto:philip.cowles@gmail.com">
-            <img src="http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/footer_social_email.png" alt="Email Me" title="Email Me" />
-          </a>
-        </div>
-        <div id="footer_name">{new Date().getFullYear()} <span>Philip Cowles</span></div>
-        <div id="back_top"><a href="#home"></a></div>
+        
+        
+        
       </div>
     </footer>
+
+    <div>{new Date().getFullYear()} <span>Philip Cowles</span></div>
   </>
   )
 }

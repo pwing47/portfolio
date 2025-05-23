@@ -183,11 +183,8 @@ li:hover .bar_faded { background: rgba(0,0,0,0.04); }
 #skills {	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, linear-gradient(180deg,rgba(249, 249, 249, 1) 0%, rgba(224, 242, 213, 1) 100%); z-index:4; } 
 #experience {		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, linear-gradient(180deg,rgba(249, 249, 249, 1) 0%, rgba(245, 225, 233, 1) 100%); z-index: 3; }
 #certifications { 		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, linear-gradient(180deg,rgba(249, 249, 249, 1) 0%, rgba(245, 239, 225, 1) 100%); z-index: 2; }   
-#projects {		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, linear-gradient(180deg,rgba(249, 249, 249, 1) 0%, rgba(245, 225, 233, 1) 100%); z-index: 1;  }
+#projects {		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, linear-gradient(180deg,rgba(249, 249, 249, 1) 0%, rgba(213, 232, 242, 1) 100%); z-index: 1;  }
 #interests { background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, linear-gradient(180deg,rgba(249, 249, 249, 1) 0%, rgba(245, 225, 233, 1) 100%); z-index: 0;   }
-
-#sub_footer {	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images//images/bg_relics_top.png) repeat-x, url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images//images/bg_noise.png) repeat, #f3e5f3; padding-top: 2.5em; margin-bottom: -3.5em;  }
-#sub_footer.relic {	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/images/bg_aboutme_top.png) repeat-x, url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images//images/bg_noise.png) repeat, #f3e5f3; }
 
 /* Home
 **************************************/
@@ -199,16 +196,10 @@ li:hover .bar_faded { background: rgba(0,0,0,0.04); }
 }
 
 #mug {
-	padding: 6px;
-	border-radius: 112px;
+	
 	border: 1px solid #fff;
 	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_nav.png) repeat, #fff;
-	float: right;
-	margin-top: -1em;
-}
-#mug, #mug img {
-	width: 212px;
-	height: 212px;
+	
 }
 
 .tooltip {
@@ -310,93 +301,12 @@ li:hover .bar_faded { background: rgba(0,0,0,0.04); }
 	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_nav.png) repeat, #fff;
 }
 
-/* Project Page
-**************************************************/
-.project_page p {
-	width: 620px;
-	padding-right: 300px;
-	margin: 0.75em 0;
-	float: left;
-}
-.project_sample .project_thumb:hover:after {
-	display: none;
-}
-
-.project_sample {
-	width: 640px;
-	float: left;
-	margin-right: 10px;
-	margin-top: 1.75em;
-	margin-bottom: 1.75em;
-}
-.project_sample .project_thumb {
-	cursor: default;
-}
-.project_sample.small {
-	width: 315px;
-}
-
-.projects_back {
-	margin-bottom: 1.5em;
-}
-.projects_back,
-.projects_prev {
-	padding-left: 45px;
-	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_backarrow_blue.png) no-repeat left center;
-}
-.projects_back,
-.projects_prev,
-.projects_next {	
-	display: inline-block;
-	/* font-family: "Whitney", "Segoe UI Bold", Tahoma, Arial, sans-serif; */
-	text-transform: uppercase;
-	font-weight: bold;
-	color: #8c9eb4;
-	font-size: 1.5em;
-	text-decoration: none;
-	padding-top: 4px;
-	height: 32px;
-}
-.projects_prev,
-.projects_next {
-	width: 275px;
-	float: left;
-	margin-top: 3em;
-}
-.projects_next {
-	text-align: right;
-	padding-right: 45px;
-	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_nextarrow_blue.png) no-repeat right center;
-}
-#relics .projects_back,
-#relics .projects_prev,
-#relics .projects_next {
-	color: #91b58d;
-}
-#relics .projects_back,
-#relics .projects_prev {
-	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_backarrow_green.png) no-repeat left center;
-}
-#relics .projects_next {
-	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_nextarrow_green.png) no-repeat right center;
-}
-
-/* About Content
+/* Interests
 *************************************************/
-#aboutme p { color: #824438; }
-#aboutme .pre_header { color: #b58c84; }
-
-#about_ps {
-	float: right;
-	margin-top: -70px;
-	margin-left: 20px;
-}
-
 .interest {
 	height: 70px;
 	margin-top: 5px;
 	padding-top: 25px;
-	width: 320px;
 	margin-left: -25px;
 	padding-left: 105px;
 	position: relative;
@@ -424,75 +334,6 @@ li:hover .bar_faded { background: rgba(0,0,0,0.04); }
 #interest_books .pic {
 	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/interest_books.png) no-repeat top left;
 	width: 85px; height: 75px; left: 12px; top: 15px;
-}
-
-/* Contact
-********************************************************/
-#contact_form {
-	margin-top: 3em;
-}
-input[type=text] {
-	font-size: 1.875em;
-	width: 445px;
-	height: 45px;
-}
-textarea {
-	font-size: 1.5em;
-	width: 545px;
-	height: 175px;
-}
-input[type=text], textarea {
-	font-family: inherit;
-	padding: 0.1em 0.25em;
-	border: 1px solid #f6eaf6;
-	margin: 4px;
-}
-.input_wrapper { display: inline-block; }
-.input_wrapper, .textarea_wrapper {
-	margin-left: -0.5em;
-	margin-bottom: 2em;
-	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_nav.png) repeat 1px 0px, #fff;
-	box-shadow: 0 1px 1px rgba(0,0,0,.12);
-}
-
-#contact .pre_header { color: #b584b5; display: block; }
-#contact p { color: #823882; }
-
-#btn_send {
-	width: 175px;
-	height: 55px;
-	background-color: #b584b5;
-	background-position: center;
-	background-repeat: no-repeat;
-	border: 0;
-	box-shadow: 0 1px 1px #4c084d;
-	color: #fff;
-	font-size: 1.5em;
-	/* font-family: "Whitney", "Segoe UI Bold", Tahoma, Arial, sans-serif; */
-	font-weight: bold;
-	text-transform: uppercase;
-	display: block;
-	cursor: pointer;
-	margin-top: 0.5em;
-	margin-left: -0.25em;
-}
-#btn_send:hover {
-	background-color: #ad7fad;
-}
-#btn_send:active {
-	outline: none !important;
-	box-shadow: inset 0 2px 1px rgba(76,8,77,0.7);
-}
-
-.form_error {
-	margin: -1.75em 0 2em 0; 
-	font-weight: bold; 
-	color: #ff3300;
-	display: none;
-}
-#form_success {
-	display: none;
-	margin-top: 3em;
 }
 
 /* Tooltip
@@ -528,17 +369,14 @@ input[type=text], textarea {
 /* Footer
 *******************************************************/
 footer {
-	width: 1340px;
-	/* font-family: "Whitney", "Segoe UI Bold", Tahoma, Arial, sans-serif; */
+	width: 100%;
+	text-align: center;
 	text-transform: uppercase;
 	font-weight: bold;
 	z-index: 1000;
-	margin: 3em auto -3em auto;
-	border-top: 3px solid #333;
+	margin: -9em auto -3em auto;
+	border-top: 4px solid #eee;
 	height: 60px;
-	background: white;
-	position: relative;
-	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #f3e5f3;
 }
 
 #footer_content {
@@ -548,7 +386,6 @@ footer {
 footer ul {
 	padding: 0;
 	display: inline-block;
-	position: absolute;
 	left: 0px;
 }
 footer li {
@@ -558,17 +395,6 @@ footer li {
 	display: inline;
 	padding: 16px 0px 0px 0px;
 }
-footer span {
-	font-weight: normal;
-}
-#footer_name {
-	text-align: right;
-	width: 170px;
-	position: absolute;
-	right: 0px;
-	display: inline-block;
-	padding: 16px 1.25em 0px 0px;
-}
 footer a {
 	text-decoration: none;
 	border: 0px;
@@ -576,33 +402,19 @@ footer a {
 footer a img {
 	border: 0px;
 }
-#footer_social a {
-	float: right;
-	width: 45px;
-	height: 45px;
-	display: block;
-}
 footer a#nav_facebook {
 	margin-right: 200px;
 }
 #back_top {
 	width: 125px;
 	height: 80px;
+	margin: 0 auto;
 	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/footer_backtotop.png) no-repeat;
-	position: absolute;
-	top: -59px;
-	left: 50%;
-	margin-left: -65px;
-}
-#back_top a {
-	display: block;
-	width: 125px;
-	height: 80px;
 }
 
 /* Media Queries
 ******************************************************/
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1023px) {
 	body { font-size: 85%; }
 	
 	.content {
@@ -616,18 +428,11 @@ footer a#nav_facebook {
 		float: none;
 		margin: 1em auto 2em auto;
 	}
-	#skills {
-		margin: 1.5em auto 0 auto;
-		float: none;
-		width: 300px;
-	}
+	
 	.skills_col,
 	.skills_col div { width: 100px; float: left; }
-	p.loud {
-		margin-top: 0.25em;
-		font-size: 2.1em;
-	}
-	#social { display: none; }
+	
+	
 	#home_intro { width: 100%; }
 	
 	#title_area h1 { 
@@ -679,14 +484,9 @@ footer a#nav_facebook {
 	.projects_next { float: right; margin-right: 10px; width: 90px; }
 	
 	/* About Me */
-	#about_ps { display: none; }
-	#aboutme h2 { margin-bottom: 0.5em; }
-	.interest .description { font-size: 1.1em; }
+	
 	.interest {
 		text-align: left;
-		margin: 0 auto;
-		float: none;
-		width: 245px;
 	}
 	
 	/* Contact */
@@ -742,9 +542,6 @@ footer a#nav_facebook {
 	}
 	footer a#nav_facebook {
 		margin-right: 0px;
-	}
-	#back_top {
-		margin-left: -63px;
 	}
 }
 
@@ -846,9 +643,6 @@ and (min-width: 961px) and (max-width: 1439px) {
 	}
 	
 	/* About Me */
-	.interest {
-		width: 255px;
-	}
 	#about_ps {
 		width: 50%;
 		margin-top: -15px;
@@ -860,11 +654,5 @@ and (min-width: 961px) and (max-width: 1439px) {
 	}
 	#footer_name {
 		width: 150px;
-	}
-	footer a#nav_facebook {
-		margin-right: 160px;
-	}
-	#back_top {
-		margin-left: 0px;
 	}
 }
