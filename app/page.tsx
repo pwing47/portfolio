@@ -73,9 +73,9 @@ export default function Portfolio() {
 
   return (    
     <>
-    <nav className="fixed hidden z-10 lg:flex t-0 w-100 md:w-1/3 justify-end">
-      <div id="nav_ribbon" className="p-3 mr-10">
-        <div id="pc_logo" title="Portfolio of Philip Cowles"></div>
+    <nav className="fixed top-0 hidden z-10 lg:flex w-100 md:w-1/3 justify-end">
+      <div id="nav_ribbon" className="p-3 mr-12">
+        <div id="pc_logo" className="rounded-full" title="Portfolio of Philip Cowles"></div>
         <ul>
           {sections.map((section, index) => (
             <li

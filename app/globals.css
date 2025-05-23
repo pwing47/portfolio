@@ -98,8 +98,7 @@ nav li:not(:first-child), #nav_down { background: url(http://philipcowles.com.s3
 	background-position: center;
 	background-repeat: no-repeat;
 	background-color: #333;
-	margin: 0 auto 0.3125em auto;
-	border-radius: 60px;
+	margin: 0 auto;
 }
 
 li .bar_faded {
@@ -197,7 +196,6 @@ li:hover .bar_faded { background: rgba(0,0,0,0.04); }
 
 #mug {
 	
-	border: 1px solid #fff;
 	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_nav.png) repeat, #fff;
 	
 }

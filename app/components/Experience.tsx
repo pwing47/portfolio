@@ -38,9 +38,9 @@ const Experience = () => {
           <h2 className={`${inter.className} text-4xl capitalize font-extrabold tracking-tight`}>Experience</h2>
 
           <div className="grid grid-cols-2 max-sm:grid-cols-1 max-sm:grid-flow-row">
-            <div className={`${inter.className}`}>
-              <h3>Work History</h3>
-              <div className="-my-6">
+            <div>
+              <h3 className="text-2xl">Work History</h3>
+              <div className={`${inter.className}`}>
                 <div className="relative pl-8 sm:pl-32 py-6 group aos-init aos-animate" data-aos="fade-up" data-aos-delay="0">
 
                   <div className="tracking-tight text-md max-sm:text-left text-slate-400 mb-1 sm:mb-0 max-sm:mb-0">Sub-Zero Wolf</div>
@@ -51,17 +51,18 @@ const Experience = () => {
                   </div>
 
                   <div className="text-slate-500 text-xs w-[90%] max-sm:w-full max-sm:text-left">
-                    Provide technical guidance and leadership of Sitecore and AEM web development and mobile application teams
+                    Promoted to leadership to guide Sitecore and AEM web development and mobile application teams
                   </div>
                 </div>
 
                 <div className="relative pl-8 sm:pl-32 py-6 group aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
                   
-                  {/* <div className="tracking-tight text-md max-sm:text-left text-slate-400 mb-1 sm:mb-0 max-sm:mb-0">Sub-Zero Wolf</div> */}
+                  <div className="tracking-tight text-md max-sm:text-left text-slate-400 mb-1 sm:mb-0 max-sm:mb-0">Sub-Zero Wolf</div>
 
                   <div className="flex flex-col sm:flex-row items-center mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-slate-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5 max-sm:text-left max-sm:items-start">
                   <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-medium w-24 h-10 max-sm:h-4 mb-3 sm:mb-0 text-slate-600 bg-slate-100 rounded-full max-sm:bg-transparent max-sm:text-white max-sm:text-left max-sm:mb-0 max-sm:-ml-3">2019 - 2023</time>
-                  <div className="text-ld text-slate-800 font-bold tracking-tight max-sm:text-left">Sitecore Web Developer/Analyst</div></div>
+                  <div className="text-ld text-slate-800 font-bold tracking-tight max-sm:text-left">Sitecore Web Developer/Analyst</div>
+                  </div>
                   <div className="text-slate-500 text-[12px] w-[90%] max-sm:w-full max-sm:text-left">                    
                     Develop and maintain public-facing and internal websites while assisting marketing CMS content authors
                   </div>
@@ -105,29 +106,41 @@ const Experience = () => {
 
           {/* Education */}
 				  <div>
-            <h3>Education</h3>
-            <div>
+          <h3 className="text-2xl">Education</h3>
+            <div className={`${inter.className}`}>
 
-              <div className="-my-6 max-sm:my-2">
+              <div className="max-sm:my-2">
                 <div className="relative pl-8 sm:pl-32 py-6 group aos-init aos-animate" data-aos="fade-up" data-aos-delay="0">
                   
-                  <div className="font-medium text-[15px] max-sm:text-left text-slate-500 mb-1 sm:mb-0 max-sm:mb-0">Assam Science and Technology University</div>
-                  
+                <div className="tracking-tight text-md max-sm:text-left text-slate-400 mb-1 sm:mb-0 max-sm:mb-0">Wisconsin School of Business</div>
                   <div className="flex flex-col sm:flex-row items-center mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-slate-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5 max-sm:text-left max-sm:items-start">
-                    <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-medium w-24 h-10 max-sm:h-4 mb-3 sm:mb-0 text-slate-600 bg-slate-100 rounded-full max-sm:bg-transparent max-sm:text-white max-sm:text-left max-sm:mb-0 max-sm:-ml-3"> 2022 - 2024</time>
+                    <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-medium w-24 h-10 max-sm:h-4 mb-3 sm:mb-0 text-slate-600 bg-slate-100 rounded-full max-sm:bg-transparent max-sm:text-white max-sm:text-left max-sm:mb-0 max-sm:-ml-3">Fall 2025</time>
                     
-                    <div className="text-md font-bold text-white max-sm:text-left">Master of Computer Applications</div>
+                    <div className="text-ld text-slate-800 font-bold tracking-tight max-sm:text-left">Certificate In-Progress, Advanced Management &amp; Leadership</div>
+                    
                   </div>
                 
                   <div className="text-slate-500 text-[12px] w-[90%] max-sm:w-full max-sm:text-left text-justify">Currently pursuing a Master of Computer Applications at Assam Science and Technology University, focused on building coding skills and more.
                   </div>
                 </div>
                 
-                <div className="relative pl-8 sm:pl-32 py-6 group aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"><div className="font-medium text-[15px] max-sm:text-left text-slate-500 mb-1 sm:mb-0 max-sm:mb-0">Gauhati University</div><div className="flex flex-col sm:flex-row items-center mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-slate-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5 max-sm:text-left max-sm:items-start"><time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-medium w-24 h-10 max-sm:h-4 mb-3 sm:mb-0 text-slate-600 bg-slate-100 rounded-full max-sm:bg-transparent max-sm:text-white max-sm:text-left max-sm:mb-0 max-sm:-ml-3"> 2018-2021</time><div className="text-md font-bold text-white max-sm:text-left">Bachelor of Computer Applications</div></div><div className="text-slate-500 text-[12px] w-[90%] max-sm:w-full max-sm:text-left text-justify">Graduated with a Bachelor of Computer Applications from Gauhati University in 2021, laying the foundation for a career in technology.</div></div><div className="relative pl-8 sm:pl-32 py-6 group aos-init aos-animate" data-aos="fade-up" data-aos-delay="200"><div className="font-medium text-[15px] max-sm:text-left text-slate-500 mb-1 sm:mb-0 max-sm:mb-0">Muhila Home Junior College</div><div className="flex flex-col sm:flex-row items-center mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-slate-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5 max-sm:text-left max-sm:items-start">
+                <div className="relative pl-8 sm:pl-32 py-6 group aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                <div className="tracking-tight text-md max-sm:text-left text-slate-400 mb-1 sm:mb-0 max-sm:mb-0">Wisconsin School of Business</div>
                 
-                <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-medium w-24 h-10 max-sm:h-4 mb-3 sm:mb-0 text-slate-600 bg-slate-100 rounded-full max-sm:bg-transparent max-sm:text-white max-sm:text-left max-sm:mb-0 max-sm:-ml-3"> 2015-2017</time>
+                <div className="flex flex-col sm:flex-row items-center mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-slate-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5 max-sm:text-left max-sm:items-start">
+                
+                <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-medium w-24 h-10 max-sm:h-4 mb-3 sm:mb-0 text-slate-600 bg-slate-100 rounded-full max-sm:bg-transparent max-sm:text-white max-sm:text-left max-sm:mb-0 max-sm:-ml-3">2024 - 2025</time>
+                
+                <div className="text-ld text-slate-800 font-bold tracking-tight max-sm:text-left">Certificate, Foundations of Management</div>
+                </div>
+                <div className="text-slate-500 text-[12px] w-[90%] max-sm:w-full max-sm:text-left text-justify">Graduated with a Bachelor of Computer Applications from Gauhati University in 2021, laying the foundation for a career in technology.</div></div><div className="relative pl-8 sm:pl-32 py-6 group aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                <div className="tracking-tight text-md max-sm:text-left text-slate-400 mb-1 sm:mb-0 max-sm:mb-0">University of Wisconsin-Stevens Point</div>
+                <div className="flex flex-col sm:flex-row items-center mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-slate-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5 max-sm:text-left max-sm:items-start">
+                
+                <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-medium w-24 h-10 max-sm:h-4 mb-3 sm:mb-0 text-slate-600 bg-slate-100 rounded-full max-sm:bg-transparent max-sm:text-white max-sm:text-left max-sm:mb-0 max-sm:-ml-3">2007 - 2010</time>
                   
-                  <div className="text-md font-bold text-white max-sm:text-left">HS (Science)</div>
+                <div className="text-ld text-slate-800 font-bold tracking-tight max-sm:text-left">Bachelor of Science, Web &amp; Digital Media Development</div>
+                  
                   </div>
 
                   <div className="text-slate-500 text-[12px] w-[90%] max-sm:w-full max-sm:text-left text-justify">
