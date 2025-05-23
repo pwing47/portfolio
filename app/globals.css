@@ -62,7 +62,7 @@ a:hover {
 **************************/
 #nav_ribbon {
 	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_nav.png) repeat 1px 0px, #fff;
-	box-shadow: 0 1px 1px rgba(0,0,0,.12);
+	box-shadow: 0 1px 20px rgba(0,0,0,0.1)
 }
 nav ul {
 	margin: 0 0.75em; /* 12px */
@@ -179,11 +179,12 @@ li:hover .bar_faded { background: rgba(0,0,0,0.04); }
 	
 }
 
-#home {			background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #d0f1f0; z-index: 5; }
-#skills {	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #f9f9f9; z-index:4; }
-#experience {		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #ddd; z-index: 3; }
-#certifications { 		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #f9daca; z-index: 2; }
-#projects {		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, #f3e5f3; z-index: 1;  }
+#home {			background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, linear-gradient(180deg,rgba(249, 249, 249, 1) 0%,  rgba(213, 232, 242, 1) 100%); z-index: 5; }
+#skills {	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, linear-gradient(180deg,rgba(249, 249, 249, 1) 0%, rgba(224, 242, 213, 1) 100%); z-index:4; } 
+#experience {		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, linear-gradient(180deg,rgba(249, 249, 249, 1) 0%, rgba(245, 225, 233, 1) 100%); z-index: 3; }
+#certifications { 		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, linear-gradient(180deg,rgba(249, 249, 249, 1) 0%, rgba(245, 239, 225, 1) 100%); z-index: 2; }   
+#projects {		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, linear-gradient(180deg,rgba(249, 249, 249, 1) 0%, rgba(245, 225, 233, 1) 100%); z-index: 1;  }
+#interests { background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_noise.png) repeat, linear-gradient(180deg,rgba(249, 249, 249, 1) 0%, rgba(245, 225, 233, 1) 100%); z-index: 0;   }
 
 #sub_footer {	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images//images/bg_relics_top.png) repeat-x, url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images//images/bg_noise.png) repeat, #f3e5f3; padding-top: 2.5em; margin-bottom: -3.5em;  }
 #sub_footer.relic {	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/images/bg_aboutme_top.png) repeat-x, url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images//images/bg_noise.png) repeat, #f3e5f3; }
@@ -218,6 +219,8 @@ li:hover .bar_faded { background: rgba(0,0,0,0.04); }
 
 	background-color: rgba(0,0,0,0.033);
 	border-radius: 100px;
+
+	text-align: center;
 }
 
 #skill_photoshop { background-image: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/skill_photoshop.png); }
@@ -390,7 +393,6 @@ li:hover .bar_faded { background: rgba(0,0,0,0.04); }
 	height: 70px;
 	margin-top: 5px;
 	padding-top: 25px;
-	float: left;
 	width: 320px;
 	margin-left: -25px;
 	padding-left: 105px;

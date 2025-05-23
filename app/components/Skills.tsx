@@ -11,9 +11,9 @@ const Skills = () => {
 
             <h2 className={`${inter.className} text-4xl capitalize font-extrabold tracking-tight`}>Skills</h2>
 
-            <p className="text-teal-800 text-2xl mt-8">A few things I'm good at</p>
+            <p className="text-teal-800 text-2xl">A few things I'm good at</p>
             
-            <div className="mt-4 skills-grid grid grid-cols-6 gap-4 w-1/2">
+            <div className="mt-12 skills-grid grid grid-cols-6 gap-4 w-1/2">
 
                 <div id="skill_photoshop" className="tooltip" data-title="Photoshop"></div>
                 <div id="skill_dreamweaver" className="tooltip" data-title="Dreamweaver"></div>
@@ -41,7 +41,7 @@ const Skills = () => {
 
             </div>
 
-            <div className="grid">
+            <div className="mt-4 skills-grid grid grid-cols-6 gap-4 w-7/8">
 
               {/* CMS */}
               <div>Sitecore</div>
