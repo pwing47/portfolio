@@ -200,6 +200,13 @@ li:hover .bar_faded { background: rgba(0,0,0,0.04); }
 	
 }
 
+.skills-grid {
+
+	div {
+		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_nav.png) repeat;
+	}
+}
+
 .tooltip {
 	height: 30px;
 	background-repeat: no-repeat;

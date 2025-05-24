@@ -27,7 +27,7 @@ export default function Portfolio() {
     projects: useRef<HTMLElement>(null),
     interests: useRef<HTMLElement>(null),
   }
-  const sectionDescs = ['A few things I\'m good at','Adventures in the real world','Proven knowledge','My creative playground','Passions and hobbies'];
+  const sectionDescs = ['A few things I\'m good at','Work and education','Tech tokens','My creative playground','Passions and hobbies'];
 
   // Update URL based on active section
   useEffect(() => {

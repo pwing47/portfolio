@@ -20,7 +20,7 @@ const Home = () => {
 
 
               <p className="text-teal-800 text-2xl mt-8">Nice to meet you! I'm a</p>
-              <p className={`${inter.className} text-teal-950 text-4xl font-bold tracking-tight`}>full-stack developer, digital <br/>marketer, and UX designer.</p>
+              <p className={`${inter.className} text-teal-950 text-4xl font-bold tracking-tight leading-tight`}>full-stack developer, <br/>digital marketer, and<br />UX designer.</p>
               
               <div className="flex mt-6 justify-center lg:justify-start">
             <div className="btn-link text-2xl font-bold py-3 px-10 pl-6 m-6 ml-0 rounded-full flex items-center">
