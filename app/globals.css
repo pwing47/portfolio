@@ -207,6 +207,20 @@ li:hover .bar_faded { background: rgba(0,0,0,0.04); }
 	}
 }
 
+.skills-badge {
+	@apply bg-gray-500/5 rounded-md flex flex-col items-center justify-center text-xs p-2 shadow-sm;
+
+	.skills-icon-wrapper {
+
+		svg {
+			width: 20px; 
+			height: 20px;
+		}
+	}
+
+	
+}
+
 .tooltip {
 	height: 30px;
 	background-repeat: no-repeat;
