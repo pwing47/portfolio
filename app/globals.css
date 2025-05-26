@@ -200,26 +200,33 @@ li:hover .bar_faded { background: rgba(0,0,0,0.04); }
 	
 }
 
-.skills-grid {
+.skills-col {
+	@apply flex flex-col items-start w-1/4 mr-6 mb-8;
 
-	div {
-		background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_nav.png) repeat;
-	}
-}
+	.skills-grid { 
 
-.skills-badge {
-	@apply bg-gray-500/5 rounded-md flex flex-col items-center justify-center text-xs p-2 shadow-sm;
-
-	.skills-icon-wrapper {
-
-		svg {
-			width: 20px; 
-			height: 20px;
+		@apply w-full mt-4 font-bold text-sm tracking-tight grid grid-cols-1 gap-2 w-1/4 mr-1;
+	
+		.skills-badge {
+			@apply bg-gray-500/5 rounded-full flex flex-row items-center justify-start text-xs p-2 shadow-sm;
+			background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_nav.png) repeat;
+		
+			.skills-icon-wrapper {  
+		
+				svg {
+					width: 20px; 
+					height: 20px;
+					@apply mx-2;
+				}
+			}
+			
 		}
 	}
-
-	
 }
+
+
+
+
 
 .tooltip {
 	height: 30px;
