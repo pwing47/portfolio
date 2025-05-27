@@ -6,7 +6,7 @@ const inter = Inter({
 
 const Interests = () => {
     return (
-        <div className="content py-10">
+        <div className="content py-10 flex flex-col items-center">
           
           <p className="text-xl">A few of my</p>
           <h2 className={`${inter.className} text-4xl capitalize font-extrabold tracking-tight`}>Interests</h2>

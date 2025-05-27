@@ -73,8 +73,9 @@ export default function Portfolio() {
 
   return (    
     <>
-    <nav className="fixed top-0 hidden z-10 lg:flex w-100 md:w-1/3 justify-end">
-      <div id="nav_ribbon" className="p-3 mr-12">
+    <nav className="fixed top-0 z-10 flex w-100 md:w-1/3 justify-end">
+
+      <div id="nav_ribbon" className="hidden lg:block p-3 mr-12">
         <div id="pc_logo" className="rounded-full" title="Portfolio of Philip Cowles"></div>
         <ul>
           {sections.map((section, index) => (
@@ -90,7 +91,7 @@ export default function Portfolio() {
           ))}
 
         </ul>
-        <div id="nav_down"></div>
+        <div id="nav_down" className="mr-12"></div>
       </div>
     </nav>
 
@@ -123,13 +124,15 @@ export default function Portfolio() {
     <footer>
       <div id="footer_content">
 
-        <div id="back_top"><a href="#" className="block"></a></div>
+        <div id="back_top" className="block cursor-pointer" onClick={() => scrollToSection('home')}></div>
 
         <ul className="my-4">
-          <li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li><li><a href="#certifications">Certifications</a></li><li><a href="#projects">Projects</a></li><li><a href="#interests">Interests</a></li>
+          <li className="cursor-pointer" onClick={() => scrollToSection('skills')}>Skills</li>
+          <li className="cursor-pointer" onClick={() => scrollToSection('experience')}>Experience</li>
+          <li className="cursor-pointer" onClick={() => scrollToSection('certifications')}>Certifications</li>
+          <li className="cursor-pointer" onClick={() => scrollToSection('projects')}>Projects</li>
+          <li className="cursor-pointer" onClick={() => scrollToSection('interests')}>Interests</li>
         </ul>
-        
-        
         
       </div>
     </footer>

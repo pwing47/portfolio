@@ -7,10 +7,10 @@ const inter = Inter({
 
 const Home = () => {
     return (
-        <div className="content py-10">
+        <div className="content pt-8 pb-10 lg:pt-10">
           
           
-          <div id="home_intros" className="flex">
+          <div id="home_intros" className="flex flex-col-reverse lg:flex-row">
             
 
             <div>
@@ -41,7 +41,7 @@ const Home = () => {
 
             </div>
 
-            <div id="mug" title="It's me!" className="rounded-full h-full ml-12 mt-12 shadow-lg">
+            <div id="mug" title="It's me!" className="rounded-full lg:h-full ml-3 lg:ml-3 xl:ml-12 mt-0 lg:mt-12 max-lg:mb-6 shadow-lg">
               <Image className="rounded-full p-3 opacity-90" src="/face.jpg" width="300" height="300" alt="Face of Philip Cowles" />
               
             </div>

@@ -60,9 +60,13 @@ a:hover {
 
 /* Left Navigation
 **************************/
+#nav_mobile {
+	
+}
 #nav_ribbon {
-	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_nav.png) repeat 1px 0px, #fff;
-	box-shadow: 0 1px 20px rgba(0,0,0,0.1)
+	background: url(/bg_nav.png) repeat 1px 0px, #fff;
+	box-shadow: 0 1px 20px rgba(0,0,0,0.1);
+	width: 260px;
 }
 nav ul {
 	margin: 0 0.75em; /* 12px */
@@ -75,13 +79,14 @@ nav a {
 	height: 84px;
 	text-decoration: none;
 }
-nav li:not(:first-child), #nav_down { background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/nav_li_shadow.png) no-repeat top center; }
+nav li:not(:first-child), #nav_down { background: url(/nav_li_shadow.png) no-repeat top center; }
 #nav_down {
 	height: 39px;
 	width: 260px;
 	position: absolute;
 	bottom: -39px;
-	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_nav_down.png) no-repeat top center;
+	right: 0;
+	background: url(/bg_nav_down.png) no-repeat top center;
 }
 
 #nav_home.active .nav-title {		color: #006666; }
@@ -197,18 +202,24 @@ li:hover .bar_faded { background: rgba(0,0,0,0.04); }
 #mug {
 	
 	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_nav.png) repeat, #fff;
+
+	@media (max-width: 1023px) {
+		margin-left: auto;
+		margin-right: auto;
+	}
 	
 }
 
 .skills-col {
-	@apply flex flex-col items-start w-1/4 mr-6 mb-8;
+	@apply flex flex-col items-start w-full sm:w-27/100 lg:w-1/4 mx-3 sm:ml-0 sm:mr-6 mb-8;
 
 	.skills-grid { 
 
 		@apply w-full mt-4 font-bold text-sm tracking-tight grid grid-cols-1 gap-2 w-1/4 mr-1;
+		
 	
 		.skills-badge {
-			@apply bg-gray-500/5 rounded-full flex flex-row items-center justify-start text-xs p-2 shadow-sm;
+			@apply bg-gray-500/5 rounded-full flex flex-row items-center justify-start text-xs p-1.5 md:p-2 shadow-sm;
 			background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_nav.png) repeat;
 		
 			.skills-icon-wrapper {  
@@ -325,6 +336,9 @@ li:hover .bar_faded { background: rgba(0,0,0,0.04); }
 ********************/
 .certification-card {
 	background: url(http://philipcowles.com.s3-website.us-east-2.amazonaws.com/images/bg_nav.png) repeat, #fff;
+
+	@apply flex flex-row shadow-sm rounded-xl;
+
 }
 
 /* Interests
@@ -447,12 +461,6 @@ footer a#nav_facebook {
 		width: 100%;
 		text-align: center;
 		padding-left: 0;
-	}
-	
-	/* Home */
-	#mug {
-		float: none;
-		margin: 1em auto 2em auto;
 	}
 	
 	.skills_col,
@@ -578,11 +586,6 @@ and (min-width: 961px) and (max-width: 1439px) {
 	}	
 	
 	/* Nav */
-	
-	#nav_ribbon {
-		width: 210px;
-		margin: 0px 20px;
-	}
 	nav a {
 		padding-left: 15px;
 		padding-top: 26px;
@@ -590,13 +593,11 @@ and (min-width: 961px) and (max-width: 1439px) {
 	}
 	#nav_down {
 		height: 39px;
-		width: 210px;
 		bottom: -39px;
 	}	
 	#pc_logo {
 		height: 80px;
 		width: 80px;
-		border-radius: 40px;
 	}
 	
 	li .bar_faded,
@@ -628,17 +629,7 @@ and (min-width: 961px) and (max-width: 1439px) {
 	#home_intro {
 		width: 500px;
 		margin-top: 8.6em;
-	}	
-	#mug {
-		border-radius: 76px;
-		margin: -30px 30px 0px 0px;
-		width: 140px;
-		height: 140px;
-	}
-	#mug img {
-		width: 140px;
-		height: 140px;
-	}	
+	}		
 	#home h1 {
 		font-size: 5em;
 	}	
@@ -649,29 +640,6 @@ and (min-width: 961px) and (max-width: 1439px) {
 	#title_area {
 		width: 560px;
 		height: 118px;
-	}
-	#title_pronounce {
-		width: 500px;
-		height: 108px;
-	}
-	
-	/* Projects and Relics */
-	.project_preview {
-		width: 325px;	
-		margin-top: 3em;
-	}
-	.project_preview:nth-child(odd) {
-		margin-right: 1.35em;
-	}
-	.project_thumb {
-		padding: 5px;
-		margin-bottom: .25em;
-	}
-	
-	/* About Me */
-	#about_ps {
-		width: 50%;
-		margin-top: -15px;
 	}
 	
 	/* Footer */
