@@ -8,7 +8,7 @@ const kreon = Kreon({
 });
 
 export const metadata: Metadata = {
-  title: "Philip Cowles | Web developer, content author, digital marketer, and UX designer",
+  title: "Philip Cowles | Web developer, digital marketer, and UX designer",
   description: "Certified Sitecore CMS developer, content author, and UX designer",
 };
 

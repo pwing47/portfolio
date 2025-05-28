@@ -27,12 +27,12 @@ const Interests = () => {
             </div>
             <div className="interest" id="interest_running">
               <h4 className={`${inter.className} text-xl capitalize font-extrabold tracking-tight`}>Running</h4>
-              <span className="text-md text-gray-500">I guess I have a lot of shoes</span>
+              <span className="text-md text-gray-500">Apparently I have a lot of shoes</span>
               <div className="pic"></div>
             </div>
             <div className="interest" id="interest_webdesign">
               <h4 className={`${inter.className} text-xl capitalize font-extrabold tracking-tight`}>Web Design</h4>
-              <span className="text-md text-gray-500">Not just a profession, you know</span>
+              <span className="text-md text-gray-500">Not just a profession</span>
               <div className="pic"></div>
             </div>
             <div className="interest" id="interest_vinyl">

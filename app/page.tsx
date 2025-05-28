@@ -115,7 +115,7 @@ export default function Portfolio() {
         <Projects />
       </section>
       
-      <section ref={sectionRefs.interests} className="content_section pt-8 pb-24" id="interests">
+      <section ref={sectionRefs.interests} className="content_section pt-8 max-sm:pb-48 pb-36" id="interests">
         <Interests />
       </section>
 
@@ -126,10 +126,10 @@ export default function Portfolio() {
 
         <div id="back_top" className="block cursor-pointer" onClick={() => scrollToSection('home')}></div>
 
-        <ul className="my-4">
+        <ul className="my-4 max-sm:mt-0 max-sm:flex max-sm:flex-wrap">
           <li className="cursor-pointer" onClick={() => scrollToSection('skills')}>Skills</li>
           <li className="cursor-pointer" onClick={() => scrollToSection('experience')}>Experience</li>
-          <li className="cursor-pointer" onClick={() => scrollToSection('certifications')}>Certifications</li>
+          <li className="cursor-pointer" onClick={() => scrollToSection('certifications')}>Certs</li>
           <li className="cursor-pointer" onClick={() => scrollToSection('projects')}>Projects</li>
           <li className="cursor-pointer" onClick={() => scrollToSection('interests')}>Interests</li>
         </ul>
