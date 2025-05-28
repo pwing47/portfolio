@@ -1,4 +1,7 @@
 
+"use client";
+import { useEffect } from 'react';
+import AOS from 'aos';
 import { Inter } from 'next/font/google';
 
 const inter = Inter({
@@ -6,6 +9,30 @@ const inter = Inter({
 });
 
 const Skills = () => {
+
+  useEffect(() => {
+        AOS.init({
+          // Global settings:
+          disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+          startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+          initClassName: 'aos-init', // class applied after initialization
+          animatedClassName: 'aos-animate', // class applied on animation
+          useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+          disableMutationObserver: false, // disables automatic mutations detections (advanced)
+          debounceDelay: 50, // the delay on debounce used while resizing/scrolling (advanced)
+          throttleDelay: 99, // the delay on throttle used while scrolling (advanced)
+          
+          // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+          offset: 120, // offset (in px) from the original trigger point
+          delay: 0, // values from 0 to 3000, with step 50ms
+          duration: 400, // values from 0 to 3000, with step 50ms
+          easing: 'ease', // default easing for AOS animations
+          once: false, // whether animation should happen only once - while scrolling down
+          mirror: false, // whether elements should animate out while scrolling past them
+          anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+        });
+      }, []);
+
     return (
         <div className="content py-10">
 
@@ -16,7 +43,7 @@ const Skills = () => {
             <div className="flex flex-wrap justify-center lg:justify-start">
 
             {/* CMS */}
-            <div className="skills-col order-1"> 
+            <div className="skills-col order-1 group aos-init aos-animate" data-aos="fade-up" data-aos-delay="0"> 
 
 
             <h3 className={`${inter.className}  max-sm:w-full max-sm:text-center text-xs md:text-sm md:text-sm capitalize font-bold tracking-tight justify-end`}>
@@ -92,7 +119,7 @@ const Skills = () => {
             
             
             {/* <div>Front end dev ---</div> */}
-            <div className="skills-col order-2"> 
+            <div className="skills-col order-2 group aos-init aos-animate" data-aos="fade-up" data-aos-delay="0"> 
 
             <h3 className={`${inter.className}  max-sm:w-full max-sm:text-center text-xs md:text-sm capitalize font-bold tracking-tight justify-end`}>Front-End Development</h3>
             
@@ -169,7 +196,7 @@ const Skills = () => {
             </div>
             </div>
 
-            <div className="skills-col order-6 sm:order-3">
+            <div className="skills-col order-6 sm:order-3 group aos-init aos-animate" data-aos="fade-up" data-aos-delay="0">
             
             <h3 className={`${inter.className} max-sm:w-full max-sm:text-center text-xs md:text-sm capitalize font-bold tracking-tight justify-end`}>UI/UX Design</h3>
             
@@ -251,7 +278,7 @@ const Skills = () => {
             
             </div>
 
-            <div className="skills-col order-4">
+            <div className="skills-col order-4 group aos-init aos-animate" data-aos="fade-up" data-aos-delay="0">
             
             <h3 className={`${inter.className}  max-sm:w-full max-sm:text-center text-xs md:text-sm capitalize font-bold tracking-tight justify-end`}>Digital Marketing</h3>
             
@@ -368,7 +395,7 @@ const Skills = () => {
 
             </div>
             
-            <div className="skills-col order-5">
+            <div className="skills-col order-5 group aos-init aos-animate" data-aos="fade-up" data-aos-delay="0">
             
             <h3 className={`${inter.className}  max-sm:w-full max-sm:text-center text-xs md:text-sm capitalize font-bold tracking-tight justify-end`}>Back-End Development</h3>
             
@@ -470,7 +497,7 @@ const Skills = () => {
 
             
 
-            <div className="skills-col order-5 sm:order-6">
+            <div className="skills-col order-5 sm:order-6 group aos-init aos-animate" data-aos="fade-up" data-aos-delay="0">
 
             
             <h3 className={`${inter.className}  max-sm:w-full max-sm:text-center text-xs md:text-sm capitalize font-bold tracking-tight justify-end`}>Tools</h3>
