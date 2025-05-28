@@ -18,7 +18,7 @@ const Skills = () => {
             {/* CMS */}
             <div className="skills-col"> 
 
-            <h3 className={`${inter.className} text-xs md:text-sm md:text-sm capitalize font-bold tracking-tight justify-end`}>Content Management Systems</h3>
+            <h3 className={`${inter.className}  max-sm:w-full max-sm:text-center text-xs md:text-sm md:text-sm capitalize font-bold tracking-tight justify-end`}>Content Management Systems</h3>
             
             <div className={`${inter.className} skills-grid`}>
               
@@ -90,7 +90,7 @@ const Skills = () => {
             {/* <div>Front end dev ---</div> */}
             <div className="skills-col"> 
 
-            <h3 className={`${inter.className}  text-xs md:text-sm capitalize font-bold tracking-tight justify-end`}>Front-End Development</h3>
+            <h3 className={`${inter.className}  max-sm:w-full max-sm:text-center text-xs md:text-sm capitalize font-bold tracking-tight justify-end`}>Front-End Development</h3>
             
             <div className={`${inter.className} skills-grid`}>
 
@@ -167,7 +167,7 @@ const Skills = () => {
 
             <div className="skills-col">
             
-            <h3 className={`${inter.className} text-xs md:text-sm capitalize font-bold tracking-tight justify-end`}>UI/UX Design</h3>
+            <h3 className={`${inter.className} max-sm:w-full max-sm:text-center text-xs md:text-sm capitalize font-bold tracking-tight justify-end`}>UI/UX Design</h3>
             
             <div className={`${inter.className} mt-4 font-bold text-sm tracking-tight skills-grid grid grid-cols-6 gap-4 w-7/8`}>
 
@@ -249,7 +249,7 @@ const Skills = () => {
 
             <div className="skills-col">
             
-            <h3 className={`${inter.className} text-xs md:text-sm capitalize font-bold tracking-tight justify-end`}>Digital Marketing</h3>
+            <h3 className={`${inter.className}  max-sm:w-full max-sm:text-center text-xs md:text-sm capitalize font-bold tracking-tight justify-end`}>Digital Marketing</h3>
             
             <div className={`${inter.className} mt-4 font-bold text-sm tracking-tight skills-grid grid grid-cols-6 gap-4 w-7/8`}>
               
@@ -366,7 +366,7 @@ const Skills = () => {
             
             <div className="skills-col">
             
-            <h3 className={`${inter.className}  text-xs md:text-sm capitalize font-bold tracking-tight justify-end`}>Back-End Development</h3>
+            <h3 className={`${inter.className}  max-sm:w-full max-sm:text-center text-xs md:text-sm capitalize font-bold tracking-tight justify-end`}>Back-End Development</h3>
             
             <div className={`${inter.className} skills-grid w-1/5`}> 
 
@@ -469,7 +469,7 @@ const Skills = () => {
             <div className="skills-col">
 
             
-            <h3 className={`${inter.className}  text-xs md:text-sm capitalize font-bold tracking-tight justify-end`}>Tools</h3>
+            <h3 className={`${inter.className}  max-sm:w-full max-sm:text-center text-xs md:text-sm capitalize font-bold tracking-tight justify-end`}>Tools</h3>
             
             <div className={`${inter.className} mt-4 font-bold text-sm tracking-tight skills-grid grid grid-cols-6 gap-4 w-7/8`}>
               

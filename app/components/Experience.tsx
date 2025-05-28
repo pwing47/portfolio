@@ -33,11 +33,11 @@ const Experience = () => {
     }, []);
 
     return (
-        <div className="content py-10 flex flex-col items-center text-left">
+        <div className="content py-10 flex flex-col max-lg:items-center text-left">
 
           <h2 className={`${inter.className} text-4xl capitalize font-extrabold tracking-tight text-left`}>Experience</h2>
 
-          <div className="grid xl:grid-cols-2 grid-cols-1 max-sm:grid-flow-row mt-2 w-9/10 lg:w-full">
+          <div className="grid xl:grid-cols-2 grid-cols-1 max-sm:grid-flow-row mt-2 w-9/10 md:w-1/2 lg:w-2/3 xl:w-full">
             <div>
               <h3 className="text-2xl">Work History</h3>
               <div className={`${inter.className}`}>
@@ -51,7 +51,7 @@ const Experience = () => {
                   </div>
 
                   <div className="text-slate-500 text-xs w-[90%] max-sm:w-full text-left">
-                    Promoted to leadership to guide Sitecore and AEM web development and mobile application teams
+                    Promoted to leadership to guide Sitecore and AEM web development and mobile app teams
                   </div>
                 </div>
 
@@ -64,7 +64,7 @@ const Experience = () => {
                   <div className="text-ld text-slate-800 font-bold tracking-tight max-sm:text-left">Sitecore Web Developer/Analyst</div>
                   </div>
                   <div className="text-slate-500 text-[12px] w-[90%] max-sm:w-full text-left">                    
-                    Develop and maintain public-facing and internal websites while assisting marketing CMS content authors
+                    Develop and maintain public and internal websites while assisting marketing CMS content authors
                   </div>
                 </div>
 
@@ -75,8 +75,8 @@ const Experience = () => {
                       <div className="text-ld text-slate-800 font-bold tracking-tight max-sm:text-left">Digital Marketing Manager &amp; Developer</div>
                     </div>
 
-                    <div className="text-slate-500 text-[12px] w-[90%] max-sm:w-full max-sm:text-left text-justify">
-                      Oversee the design, development, and CMS content authoring of six company websites leveraging a C# .NET based CMS
+                    <div className="text-slate-500 text-[12px] w-[90%] max-sm:w-full text-left ">
+                      Oversee the design, development, and CMS content authoring of six company websites leveraging .NET
                     </div>
                 </div>
 
@@ -84,10 +84,11 @@ const Experience = () => {
                     <div className="tracking-tight text-md max-sm:text-left text-slate-400 mb-1 sm:mb-0 max-sm:mb-0 text-left">Epic</div>
 
                     <div className="flex flex-col sm:flex-row items-center mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-slate-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5 max-sm:text-left max-sm:items-start"><time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-medium w-24 h-10 max-sm:h-4 mb-3 sm:mb-0 text-slate-600 bg-slate-100 rounded-full max-sm:bg-transparent max-sm:text-white max-sm:text-left max-sm:mb-0 max-sm:-ml-3"> 2012 - 2015</time>
-                      <div className="text-ld text-slate-800 font-bold tracking-tight max-sm:text-left">UX Designer</div>
+                      <div className="text-ld text-slate-800 font-bold tracking-tight text-left">UX Designer</div>
                     </div>
 
-                    <div className="text-slate-500 text-[12px] w-[90%] max-sm:w-full max-sm:text-left text-justify">I'll design responsive websites, implement Figma designs, collaborate on UI/UX, use React, Next.js, and Tailwind CSS, write clean code, and ensure compatibility across devices.
+                    <div className="text-slate-500 text-[12px] w-[90%] max-sm:w-full text-left ">
+                      Wireframe and design innovative and beautiful user interfaces for millions of healthcare professionals
                     </div>
                 </div>
 
@@ -95,11 +96,11 @@ const Experience = () => {
                   <div className="tracking-tight text-md max-sm:text-left text-slate-400 mb-1 sm:mb-0 max-sm:mb-0 text-left">ZubaWing LLC</div>
                 <div className="flex flex-col sm:flex-row items-center mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-slate-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5 max-sm:text-left max-sm:items-start">
                   <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-medium w-24 h-10 max-sm:h-4 mb-3 sm:mb-0 text-slate-600 bg-slate-100 rounded-full max-sm:bg-transparent max-sm:text-white max-sm:text-left max-sm:mb-0 max-sm:-ml-3"> 2010 - 2012</time>
-                  <div className="text-ld text-slate-800 font-bold tracking-tight max-sm:text-left">Application Developer</div>
+                  <div className="text-ld text-slate-800 font-bold tracking-tight max-sm:text-left">Senior Application Developer</div>
                 </div>
-                <div className="text-slate-500 text-[12px] w-[90%] max-sm:w-full max-sm:text-left text-justify">
-                I'll design responsive websites, implement Figma designs, collaborate on UI/UX, use React, Next.js, and Tailwind CSS, write clean code, and ensure compatibility across devices.
-                </div>
+                <div className="text-slate-500 text-[12px] w-[90%] max-sm:w-full text-left">
+                Brainstorm, design, and develop a variety of Android and iOS games and apps
+                </div> 
                 </div>
 				    </div>
 				  </div>
