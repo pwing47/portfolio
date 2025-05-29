@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Kreon, Inter } from "next/font/google";
 import "./globals.css";
 import AOSProvider from './AOSProvider';
+import GoogleAnalytics from './GoogleAnalytics';
 
 const kreon = Kreon({
   subsets: ["latin"],
@@ -19,6 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${kreon.className} antialiased`}>
+      <GoogleAnalytics />
       <body>
         <AOSProvider>
               {children}
