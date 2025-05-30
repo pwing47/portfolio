@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Kreon, Inter } from "next/font/google";
+import { Kreon } from "next/font/google";
 import "./globals.css";
-import AOSProvider from './AOSProvider';
-import GoogleAnalytics from './GoogleAnalytics';
+import AOSProvider from './plugins/AOSProvider';
+import GoogleAnalytics from './plugins/GoogleAnalytics';
 
 const kreon = Kreon({
   subsets: ["latin"],

@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import Home from './components/Home'
 import Certifications from './components/Certifications'
@@ -10,6 +9,7 @@ import Projects from './components/Projects'
 import Interests from './components/Interests'
 import Skills from './components/Skills'
 import { Inter } from 'next/font/google';
+import useAOS from './plugins/useAOS'
 
 const inter = Inter({
   subsets: ["latin"],
@@ -67,9 +67,7 @@ export default function Portfolio() {
     })
   }
 
-  function cn(arg0: string, arg1: string): string | undefined {
-    throw new Error('Function not implemented.')
-  }
+  useAOS();
 
   return (    
     <>

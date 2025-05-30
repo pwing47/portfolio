@@ -13,7 +13,7 @@ const Interests = () => {
 
 
   
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full lg:w-3/4 mt-3 mb-12 px-18 lg:px-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full lg:w-3/4 mt-3 mb-12 px-18 lg:px-0 group aos-init aos-animate" data-aos="fade-up" data-aos-delay="0">
 
             <div className="interest" id="interest_concerts">
               <h4 className={`${inter.className} text-xl capitalize font-extrabold tracking-tight`}>Concerts</h4>
