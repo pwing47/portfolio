@@ -14,7 +14,7 @@ const Projects = () => {
           <h3 className={`${inter.className} text-2xl capitalize font-extrabold tracking-tight`}>Consonance</h3>
           <p className="text-xl">Word game for Android and iOS</p>
 
-          <ul className={`${inter.className} text-sm my-4 list-disc lg:ml-6 w-full lg:w-7/8`}>
+          <ul className={`${inter.className} text-sm my-4 list-disc lg:ml-6 w-full lg:w-7/8 group aos-init aos-animate`} data-aos="fade-up" data-aos-delay="0">
           <li className="p-2">
 This word game leverages an innovative hint algorithm built with Angular and OpenAI API.
 </li>
@@ -25,7 +25,7 @@ Players experience a mix of letters and must navigate through strategically-plac
 Choose daily challenges, practice mode, or attempt to unlock 50 unique achievements.
           </li></ul>
 
-          <div className="flex my-4 mt-8 justify-center lg:justify-start">
+          <div className="flex my-4 mt-8 justify-center lg:justify-start group aos-init aos-animate" data-aos="fade-up" data-aos-delay="0">
 
           <a href="https://play.google.com/store/apps/details?id=com.philipcowles.consonance&hl=en_US">
             <Image src="/playstore.svg" width="180" height="53"  alt="Google Play Store" />
@@ -41,7 +41,7 @@ Choose daily challenges, practice mode, or attempt to unlock 50 unique achieveme
 
           
 
-          <div className="grid grid-cols-4 gap-4 mt-12 mx-8 lg:mx-0 content-evenly">
+          <div className="grid grid-cols-4 gap-4 mt-12 mx-8 lg:mx-0 content-evenly group aos-init aos-animate" data-aos="fade-up" data-aos-delay="0">
           <Image width="810" height="1440" alt="Consonance gameplay" src="/consonance1.webp" className="shadow-lg rounded-md" />
           <Image width="810" height="1440" alt="Consonance main menu" src="/consonance2.webp" className="shadow-lg rounded-md" />
           <Image width="810" height="1440" alt="Consonance game menus" src="/consonance3.webp" className="shadow-lg rounded-md" />

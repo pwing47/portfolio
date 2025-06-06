@@ -9,7 +9,7 @@ const Certifications = () => {
         <div className="content py-10 flex flex-col items-center lg:items-start">
           <h2 className={`${inter.className} text-4xl capitalize font-extrabold tracking-tight`}>Certifications</h2>
 
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 w-15/16 my-4 text-left">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 w-15/16 my-4 text-left group aos-init aos-animate" data-aos="fade-up" data-aos-delay="0">
 
           
             <div className="certification-card">
